@@ -1,0 +1,29 @@
+{
+  "name": "namecheap-api-client",
+  "version": "1.0.0",
+  "description": "Client library for the Namecheap API",
+  "main": "index.js",
+  "repository": "https://github.com/octhuber/namecheap-api-client",
+  "author": "Antoine Beauvais-Lacasse <abeaulac@octhuber.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cxml": "^0.1.1",
+    "cxsd": "beaulac/cxsd#master",
+    "lodash": "^4.17.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.16",
+    "@types/cheerio": "^0.22.3",
+    "@types/lodash": "^4.14.77",
+    "@types/request": "^2.0.6",
+    "@types/request-promise": "^4.1.38"
+  },
+  "resolutions": {
+    "cget": "0.2.1"
+  }
+}
