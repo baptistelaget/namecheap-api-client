@@ -1,0 +1,10 @@
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+<Errors/>
+<RequestedCommand>namecheap.ssl.resendApproverEmail</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.resendApproverEmail">
+    <SSLResendApproverEmailResult ID="500532" IsSuccess="true"/>
+  </CommandResponse>
+<Server>SERVER-NAME</Server>
+<GMTTimeDifference>+5:30</GMTTimeDifference>
+<ExecutionTime>3.826</ExecutionTime>
+</ApiResponse>

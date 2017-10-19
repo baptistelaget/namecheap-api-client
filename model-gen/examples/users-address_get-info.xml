@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.users.address.getInfo</RequestedCommand>
+  <CommandResponse Type="namecheap.users.address.getInfo">
+    <GetAddressInfoResult>
+      <AddressId>49</AddressId>
+      <UserName>apisample</UserName>
+      <AddressName>newaddress_test</AddressName>
+      <Default_YN>false</Default_YN>
+      <FirstName>api</FirstName>
+      <LastName>sample</LastName>
+      <JobTitle>jtitle</JobTitle>
+      <Organization>org_Test</Organization>
+      <Address1>add1test</Address1>
+      <Address2>add2test</Address2>
+      <City>city_test</City>
+      <StateProvince>state_test</StateProvince>
+      <StateProvinceChoice>province_test</StateProvinceChoice>
+      <Zip>641004</Zip>
+      <Country>IN</Country>
+      <Phone>91.1111111111</Phone>
+      <Fax>91.11111111</Fax>
+      <PhoneExt>23423</PhoneExt>
+      <EmailAddress>contact@apisample.com</EmailAddress>
+    </GetAddressInfoResult>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>+5</GMTTimeDifference>
+  <ExecutionTime>0.047</ExecutionTime>
+</ApiResponse>

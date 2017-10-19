@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.ssl.create</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.create">
+    <SSLCreateResult IsSuccess="true" OrderId="3186" TransactionId="4211" ChargedAmount="30.2000">
+      <SSLCertificate CertificateID="500393" Created="06/26/2010" Expires="" SSLType="PositiveSSL" Years="2" Status="NewPurchase" />
+    </SSLCreateResult>
+  </CommandResponse>
+  <Server>IMWS-A03</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>0.219</ExecutionTime>
+</ApiResponse>

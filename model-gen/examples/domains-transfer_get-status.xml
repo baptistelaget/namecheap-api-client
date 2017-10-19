@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.domains.transfer.getStatus</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.transfer.getstatus">
+    <DomainTransferGetStatusResult TransferID="15" Status="Queued for submission" StatusID="-1" />
+  </CommandResponse>
+  <Server>EV1SERVE-3CQ3CC</Server>
+  <GMTTimeDifference>+5</GMTTimeDifference>
+  <ExecutionTime>0.031</ExecutionTime>
+</ApiResponse>

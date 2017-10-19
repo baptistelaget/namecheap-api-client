@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.domains.renew</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.renew">
+    <DomainRenewResult DomainName="models.tv" DomainID="151378" Renew="true" OrderID="109116" TransactionID="119569" ChargedAmount="650.0000">
+      <DomainDetails>
+        <ExpiredDate>4/30/2021 11:31:13 AM</ExpiredDate>
+        <NumYears>0</NumYears>
+      </DomainDetails>
+    </DomainRenewResult>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>+2:59</GMTTimeDifference>
+  <ExecutionTime>29.914</ExecutionTime>
+</ApiResponse>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+<Errors/>
+<Warnings/>
+<RequestedCommand>namecheap.users.login</RequestedCommand>
+<CommandResponse Type="namecheap.users.login">
+<UserLoginResult UserName="user123" LoginSuccess="true"/>
+</CommandResponse>
+<Server>SERVER159</Server>
+<GMTTimeDifference>--6:00</GMTTimeDifference>
+<ExecutionTime>0.03</ExecutionTime>
+</ApiResponse>
+

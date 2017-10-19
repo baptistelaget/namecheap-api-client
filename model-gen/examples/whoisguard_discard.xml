@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.discard</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.discard">
+    <WhoisguardDiscardResult ID="5924316" IsSuccess="true" />
+  </CommandResponse>
+  <Server>API02</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>0.92</ExecutionTime>
+</ApiResponse>

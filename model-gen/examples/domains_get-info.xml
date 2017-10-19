@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.domains.getinfo</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.getinfo">
+    <DomainGetInfoResult Status="Ok" ID="736542" DomainName="domain1.com" OwnerName="apisuer" IsOwner="true" IsPremium="true">
+      <DomainDetails>
+        <CreatedDate>09/05/2016</CreatedDate>
+        <ExpiredDate>09/05/2016</ExpiredDate>
+      </DomainDetails>
+      <LockDetails />
+      <Whoisguard Enabled="True">
+        <ID>3655801</ID>
+        <ExpiredDate>01/26/2013</ExpiredDate>
+      </Whoisguard>
+      <DnsDetails ProviderType="ENOM" />
+      <Modificationrights All="true" />
+    </DomainGetInfoResult>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>9.328</ExecutionTime>
+</ApiResponse>

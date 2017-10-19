@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.domains.getRegistrarLock</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.getRegistrarLock">
+    <DomainGetRegistrarLockResult Domain="domain1.com" RegistrarLockStatus="false" />
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>2.812</ExecutionTime>
+</ApiResponse>

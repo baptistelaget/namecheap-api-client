@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.domains.dns.getEmailForwarding</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.dns.getEmailForwarding">
+    <DomainDNSGetEmailForwardingResult Domain="domain.com">
+      <Forward mailbox="name1">name1@domain.com</Forward>
+      <Forward mailbox="name2">name2@domain.com</Forward>
+    </DomainDNSGetEmailForwardingResult>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>0.01</ExecutionTime>
+</ApiResponse>

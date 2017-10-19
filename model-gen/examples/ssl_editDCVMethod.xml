@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+ <Errors/>
+ <Warnings/>
+ <RequestedCommand>namecheap.ssl.editDCVMethod</RequestedCommand>
+ <CommandResponse Type="namecheap.ssl.editDCVMethod">
+  <SSLEditDCVMethodResult ID="893024" IsSuccess="true">
+   <HttpDCValidation ValueAvailable="true">
+    <FileName><![CDATA[2689665E8233592B5981D44FCD1F38F9.txt]]></FileName>
+    <FileContent><![CDATA[DBE4528C4E70301286E5368B52760B385341BA3C8534537F8C2F5AC674230066 comodoca.com 59a7ea09227de]]></FileContent>
+   </HttpDCValidation>
+   <DNSDCValidation ValueAvailable="false">
+    <HostName><![CDATA[]]></HostName>
+    <Target><![CDATA[]]></Target>
+   </DNSDCValidation>
+   <Domains/>
+  </SSLEditDCVMethodResult>
+ </CommandResponse>
+ <Server>d7855d416639</Server>
+ <GMTTimeDifference>--5:00</GMTTimeDifference>
+ <ExecutionTime>0.930</ExecutionTime>
+</ApiResponse>

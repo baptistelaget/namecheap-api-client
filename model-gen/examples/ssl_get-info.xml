@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+<Errors />
+<Warnings />
+<RequestedCommand>namecheap.ssl.getInfo</RequestedCommand>
+<CommandResponse Type="namecheap.ssl.getInfo">
+ <SSLGetInfoResult Status="active" StatusDescription="Certificate is Active." Type="positivessl" IssuedOn="1/20/2014" Expires="1/20/2015" ActivationExpireDate="" OrderId="10439081" ReplacedBy="747253" SANSCount="0">
+ <CertificateDetails>
+ <CSR>
+ <![CDATA[
+-----BEGIN CERTIFICATE REQUEST-----
+MIIC3jCCAcYCAQAwgZgxGTAXBgNVBAMMEGxhbWFyaW9vbmVhbC5jb20xFTATBgNV
+BAoMDGxhbWFyaW9vbmVhbDERMA8GA1UECwwIc2VjdXJpdHkxCzAJBgNVBAcMAkto
+5eu2KxLOJtaRL++ur5foTTe9
+-----END CERTIFICATE REQUEST-----
+]]>
+ </CSR>
+<ApproverEmail>example@domain.com</ApproverEmail>  
+<CommonName>domain.com</CommonName>
+<AdministratorName>John Doe</AdministratorName>
+<AdministratorEmail>example@domain.com</AdministratorEmail>
+ <Certificates CertificateReturned="true" ReturnType="Individual">
+ <Certificate>
+ <![CDATA[
+-----BEGIN CERTIFICATE-----
+MIIFBDCCA+ygAwIBAgIQJXnrY7043QfanPVrLcKPczANBgkqhkiG9w0BAQUFADBz
+MQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD
+LDGeQmFIuHBMs878DkdOKZUsR4Cs7AzcYOxRWZUuAHpDrHQQiR5QHTg6Mc2ZtFvr
+QwQg7hdY7gQDuoC94Ndm/2LrNbY9ZFz4dCV2+E8BYBsL0GlPMlSKxw==
+-----END CERTIFICATE-----
+]]>
+ </Certificate>
+ <CaCertificates>
+<Certificate Type="INTERMEDIATE">
+ <Certificate>
+ <![CDATA[
+-----BEGIN CERTIFICATE-----
+MIIENjCCAx6gAwIBAgIBATANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJTRTEU
+MBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFs
+c4g/VhsxOBi0cQ+azcgOno4uG+GMmIPLHzHxREzGBHNJdmAPx/i9F4BrLunMTA5a
+mnkPIAou1Z5jJh5VkpTYghdae9C8x49OhgQ=
+-----END CERTIFICATE-----
+]]>
+ </Certificate>
+</Certificate>
+<Certificate Type="INTERMEDIATE">
+ <Certificate>
+ <![CDATA[
+-----BEGIN CERTIFICATE-----
+MIIE5TCCA82gAwIBAgIQB28SRoFFnCjVSNaXxA4AGzANBgkqhkiG9w0BAQUFADBv
+uuGtm87fM04wO+mPZn+C+mv626PAcwDj1hKvTfIPWhRRH224hoFiB85ccsJP81cq
+cdnUl4XmGFO3
+-----END CERTIFICATE-----
+]]>
+ </Certificate>
+</Certificate>
+ </CaCertificates>
+ </Certificates>
+ </CertificateDetails>
+ <Provider>
+<OrderID>111111</OrderID>
+<Name>COMODO</Name>
+ </Provider>
+ </SSLGetInfoResult>
+</CommandResponse>
+<Server>API01</Server>
+<GMTTimeDifference>--5:00</GMTTimeDifference>
+<ExecutionTime>0.542</ExecutionTime>
+ </ApiResponse>

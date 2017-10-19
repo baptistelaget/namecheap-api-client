@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.users.getAddFundsStatus</RequestedCommand>
+  <CommandResponse Type="namecheap.users.getAddFundsStatus">
+    <GetAddFundsStatusResult TransactionID="1233" Amount="40" Status="COMPLETED" />
+  </CommandResponse>
+  <Server>IMWS-A09</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>2.714</ExecutionTime>
+</ApiResponse>

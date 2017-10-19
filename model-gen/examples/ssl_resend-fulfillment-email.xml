@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.ssl.resendFulfillmentEmail</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.resendFulfillmentEmail">
+    <SSLResendFulfillmentEmailResult ID="501513" IsSuccess="true" />
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>3.131</ExecutionTime>
+</ApiResponse>

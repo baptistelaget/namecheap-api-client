@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.domains.transfer.create</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.transfer.create">
+    <DomainTransferCreateResult Domainname="domain.com" Transfer="true" TransferID="15" StatusID="-1" OrderID="575" TransactionID="759" ChargedAmount="8.88" StatusCode="2" />
+  </CommandResponse>
+  <Server>EV1SERVE-3CQ3CC</Server>
+  <GMTTimeDifference>+5</GMTTimeDifference>
+  <ExecutionTime>0.25</ExecutionTime>
+</ApiResponse>

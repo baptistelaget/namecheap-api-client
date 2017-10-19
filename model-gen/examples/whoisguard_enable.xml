@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.enable</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.enable">
+    <WhoisguardEnableResult DomainName="domain1.com" IsSuccess="true" />
+  </CommandResponse>
+  <Server>API02</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>0.92</ExecutionTime>
+</ApiResponse>

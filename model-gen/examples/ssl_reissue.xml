@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.ssl.reissue</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.reissue">
+    <SSLReissueResult ID="802258" IsSuccess="true">
+      <HttpDCValidation ValueAvailable="true">
+        <FileName><![CDATA[m2gswec3.htm]]></FileName>
+        <FileContent><![CDATA[q3BUwrGagOfnlMGQTgCF]]></FileContent>
+      </HttpDCValidation>
+    </SSLReissueResult>
+  </CommandResponse>
+  <Server>WEB1-SANDBOX1</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>4.941</ExecutionTime>
+</ApiResponse>

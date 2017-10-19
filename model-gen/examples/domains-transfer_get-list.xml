@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors/>
+  <Warnings/>
+  <RequestedCommand>namecheap.domains.transfer.getList</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.transfer.getList">
+    <TransferGetListResult>
+      <Transfer ID="59" Domainname="domain1.com" User="apiexample" TransferDate="02/15/2010" OrderID="32060156" StatusID="20" Status="CANCELLED" StatusDate="03/27/2010" StatusDescription="Canceled - Domain is currently not registered and cannot be transferrred"/>
+      <Transfer ID="75" Domainname="domain8.co.uk" User="apiexample" TransferDate="04/13/2010" OrderID="32060636" StatusID="4" Status="INPROGRESS" StatusDate="03/14/2010" StatusDescription="Canceled due to domain status"/>
+      <Transfer ID="77" Domainname="domain18.com" User="apiexample" TransferDate="06/01/2010" OrderID="32061647" StatusID="15" Status="CANCELLED" StatusDate="07/05/2010" StatusDescription="Canceled - cannot obtain domain contacts from UWhois"/>
+      <Transfer ID="78" Domainname="domain57.com" User="apiexample" TransferDate="06/05/2010" OrderID="32061629" StatusID="15" Status="CANCELLED" StatusDate="07/05/2010" StatusDescription="Canceled - cannot obtain domain contacts from UWhois"/>
+    </TransferGetListResult>
+    <Paging>
+      <TotalItems>49</TotalItems>
+      <CurrentPage>1</CurrentPage>
+      <PageSize>10</PageSize>
+    </Paging>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.096</ExecutionTime>
+</ApiResponse>

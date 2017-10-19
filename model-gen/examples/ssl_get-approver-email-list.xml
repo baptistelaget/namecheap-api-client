@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <RequestedCommand>namecheap.ssl.getApproverEmailList</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.getApproverEmailList">
+    <GetApproverEmailListResult Domain="domain.com">
+      <Domainemails>
+        <email>3db85a8e21b54bab848eb8f01d5d78c5.protect@whoisguard.com</email>
+      </Domainemails>
+      <Genericemails>
+        <email>postmaster@domain.com</email>
+        <email>sslwebmaster@domain.com</email>
+        <email>ssladministrator@domain.com</email>
+        <email>mis@domain.com</email>
+      </Genericemails>      
+    </GetApproverEmailListResult>
+  </CommandResponse>
+  <Server>SERVER-NAME</Server>
+  <GMTTimeDifference>--6:00</GMTTimeDifference>
+  <ExecutionTime>3.615</ExecutionTime>
+</ApiResponse>

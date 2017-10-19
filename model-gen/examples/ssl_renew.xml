@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.ssl.renew</RequestedCommand>
+  <CommandResponse>
+    <SSLRenewResult CertificateID="501904" Years="1" OrderId="2345545" TransactionId="32487444" ChargedAmount="9.98" />
+  </CommandResponse>
+  <Server>IMWS-A03</Server>
+  <GMTTimeDifference>+5:30</GMTTimeDifference>
+  <ExecutionTime>0.219</ExecutionTime>
+</ApiResponse>

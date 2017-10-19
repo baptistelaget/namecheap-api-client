@@ -1,0 +1,28 @@
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.ssl.parseCSR</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.parseCSR">
+    <SSLParseCSRResult>
+      <CSRDetails>
+        <CommonName>domain.com</CommonName>
+        <DomainName>domain.com</DomainName>
+        <Country>US</Country>
+        <OrganisationUnit>com</OrganisationUnit>
+        <Organisation>Org</Organisation>
+        <ValidTrueDomain>false</ValidTrueDomain>
+        <State>California</State>
+        <Locality>la</Locality>
+        <Email>someemail@domain.com</Email>
+      </CSRDetails>
+      <HttpDCValidation ValueAvailable="true">
+        <FileName><![CDATA[776DE8TT1FA13356DAB9JJ0F1ACDXSD2.txt]]></FileName>
+        <FileContent><![CDATA[UUU2310A0C5S55223FC560CT432259CB4177C79D
+comodoca.com]]></FileContent>
+      </HttpDCValidation>
+    </SSLParseCSRResult>
+  </CommandResponse>
+  <Server>WEB1-SANDBOX1</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>0.711</ExecutionTime>
+</ApiResponse>

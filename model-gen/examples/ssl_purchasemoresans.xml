@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.ssl.purchaseMoreSANS</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.purchaseMoreSANS">
+    <SSLPurchaseMoreSANSResult IsSuccess="true" OrderId="111" TransactionId="11111" ChargedAmount="23.3000">
+      <SSLCertificate CertificateID="1111" SSLType="positivessl multi domain" Years="1" Status="NEWPURCHASE" SANSCount="4" />
+    </SSLPurchaseMoreSANSResult>
+  </CommandResponse>
+  <Server>API02</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>0.874</ExecutionTime>
+</ApiResponse>
