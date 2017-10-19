@@ -7,8 +7,8 @@ const cheerio = require('cheerio');
 const path = require('path');
 const fs = require('fs');
 
-const trangPath = path.relative(__dirname, 'trang-20091111.jar');
-const cxsdPath = path.relative(__dirname, path.join('..', 'node_modules', '.bin', 'cxsd'));
+const trangPath = path.resolve(__dirname, 'trang-20091111.jar');
+const cxsdPath = path.resolve(__dirname, '..', 'node_modules', '.bin', 'cxsd');
 
 const definitionsDir = path.resolve(__dirname, '..', 'model');
 const examplesDir = path.resolve(__dirname, 'examples');
@@ -71,7 +71,7 @@ function extractExampleFromHTML(html) {
 }
 
 function generateSchemaFromExamples() {
-    const schemaPath = path.join(schemaDir, 'namecheap_api.xsd');
+    const schemaPath = path.join(schemaDir, 'namecheap.api.xsd');
 
     const exampleFiles = fs.readdirSync(examplesDir)
                            .filter(file => file.endsWith('.xml'))
@@ -84,7 +84,14 @@ function generateSchemaFromExamples() {
 exports.generateSchemaFromExamples = generateSchemaFromExamples;
 
 function generateDefinitionsFromSchema(schemaPath) {
-    return execFile(cxsdPath, ['-t', definitionsDir, '-j', definitionsDir, `file://${schemaPath}`]);
+    const root = path.resolve(__dirname, '..');
+    return execFile(
+        cxsdPath,
+        ['-t', definitionsDir, '-j', definitionsDir, `file://${path.relative(root, schemaPath)}`],
+        {cwd: root}
+    );
 }
 
 exports.generateDefinitionsFromSchema = generateDefinitionsFromSchema;
+
+generateDefinitionsFromSchema(path.join(schemaDir, 'namecheap.api.xsd'));
