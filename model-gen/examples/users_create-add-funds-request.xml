@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
-<Errors/>
-<Warnings/>
-  <RequestedCommand>namecheap.users.createAddfundsRequest</RequestedCommand>
+    <Errors />
+    <Warnings />
+    <RequestedCommand>namecheap.users.createAddfundsRequest</RequestedCommand>
     <CommandResponse Type="namecheap.users.createAddfundsRequest">
-     <CreatAddFundsRequestResult TokenID="3b54569a58e04ca6bde7db944d328cb4"
-      ReturnURL="http://www.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=3b545328cb4"/>
-      RedirectURL="https://www.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=3b545328cb4"/>
+        <CreateAddFundsRequestResult TokenID="3b54569a58e04ca6bde7db944d328cb4"
+                                     ReturnURL="http://www.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=3b545328cb4"
+                                     RedirectURL="https://www.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=3b545328cb4" />
     </CommandResponse>
-<Server>IMWS-A09</Server>
-<GMTTimeDifference>+5:30</GMTTimeDifference>
-<ExecutionTime>10.732</ExecutionTime>
+    <Server>IMWS-A09</Server>
+    <GMTTimeDifference>+5:30</GMTTimeDifference>
+    <ExecutionTime>10.732</ExecutionTime>
 </ApiResponse>            
