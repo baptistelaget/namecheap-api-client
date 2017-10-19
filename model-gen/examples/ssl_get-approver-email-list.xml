@@ -5,13 +5,13 @@
   <CommandResponse Type="namecheap.ssl.getApproverEmailList">
     <GetApproverEmailListResult Domain="domain.com">
       <Domainemails>
-        <email>3db85a8e21b54bab848eb8f01d5d78c5.protect@whoisguard.com</email>
+        <Email>3db85a8e21b54bab848eb8f01d5d78c5.protect@whoisguard.com</Email>
       </Domainemails>
       <Genericemails>
-        <email>postmaster@domain.com</email>
-        <email>sslwebmaster@domain.com</email>
-        <email>ssladministrator@domain.com</email>
-        <email>mis@domain.com</email>
+        <Email>postmaster@domain.com</Email>
+        <Email>sslwebmaster@domain.com</Email>
+        <Email>ssladministrator@domain.com</Email>
+        <Email>mis@domain.com</Email>
       </Genericemails>      
     </GetApproverEmailListResult>
   </CommandResponse>

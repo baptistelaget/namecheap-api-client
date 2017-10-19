@@ -466,14 +466,14 @@
   <xs:element name="Domainemails">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="x:email"/>
+        <xs:element ref="x:Email"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Genericemails">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="x:email"/>
+        <xs:element maxOccurs="unbounded" ref="x:Email"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -894,7 +894,6 @@
       <xs:attribute name="Type" type="xs:NCName"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="email" type="xs:string"/>
   <xs:complexType name="DomainDetails">
     <xs:sequence>
       <xs:element ref="x:DomainDetails"/>
