@@ -1,0 +1,366 @@
+{
+    "namecheap.domains.dns.getEmailForwarding": {
+        "DomainName": "domain.com"
+    },
+    "namecheap.domains.dns.getHosts": {
+        "SLD": "domain",
+        "TLD": "com"
+    },
+    "namecheap.domains.dns.getList": {
+        "SLD": "domain",
+        "TLD": "com"
+    },
+    "namecheap.domains.dns.setCustom": {
+        "SLD": "domain",
+        "TLD": "com",
+        "NameServers": "dns1.name-servers.com,dns2.name-servers.com"
+    },
+    "namecheap.domains.dns.setDefault": {
+        "SLD": "domain",
+        "TLD": "com"
+    },
+    "namecheap.domains.dns.setEmailForwarding": {
+        "DomainName": "domain.com",
+        "mailbox1": "info",
+        "ForwardTo1": "domaininfo@gmail.com",
+        "mailbox2": "careers",
+        "ForwardTo2": "domaincareer@gmail.com"
+    },
+    "namecheap.domains.dns.setHosts": {
+        "SLD": "domain51",
+        "TLD": "com",
+        "HostName1": "@",
+        "RecordType1": "URL",
+        "Address1": "http://www.namecheap.com",
+        "TTL1": "100",
+        "HostName2": "mynewcomp",
+        "RecordType2": "A",
+        "Address2": "12.56.67.78",
+        "TTL2": "1000"
+    },
+    "namecheap.domains.ns.create": {
+        "SLD": "domain",
+        "TLD": "com",
+        "Nameserver": "ns1.domain.com",
+        "IP": "192.165.15.103"
+    },
+    "namecheap.domains.ns.delete": {
+        "SLD": "domain",
+        "TLD": "com",
+        "Nameserver": "ns1.domain.com"
+    },
+    "namecheap.domains.ns.getInfo": {
+        "SLD": "domain",
+        "TLD": "com",
+        "Nameserver": "ns1.domain.com"
+    },
+    "namecheap.domains.ns.update": {
+        "SLD": "domain",
+        "TLD": "com",
+        "Nameserver": "ns1.domain.com",
+        "OldIP": "192.165.15.103",
+        "IP": "12.45.63.32"
+    },
+    "namecheap.domains.transfer.create": {
+        "DomainName": "domain.com",
+        "Years": "1",
+        "EPPCode": "213456234554454453"
+    },
+    "namecheap.domains.transfer.getList": {
+        "listtype": "all",
+        "page": "1",
+        "pagesize": "10"
+    },
+    "namecheap.domains.transfer.getStatus": {
+        "TransferID": "15"
+    },
+    "namecheap.domains.transfer.updateStatus": {
+        "TransferID": "15",
+        "Resubmit": "true"
+    },
+    "namecheap.domains.check": {
+        "DomainList": "us.xyz"
+    },
+    "namecheap.domains.create": {
+        "DomainName": "aa.us.com",
+        "Years": "1",
+        "AuxBillingFirstName": "John",
+        "AuxBillingLastName": "Smith",
+        "AuxBillingAddress1": "8939 S.cross Blv",
+        "AuxBillingStateProvince": "CA",
+        "AuxBillingPostalCode": "90045",
+        "AuxBillingCountry": "US",
+        "AuxBillingPhone": " 1.6613102107",
+        "AuxBillingEmailAddress": "john@gmail.com",
+        "AuxBillingOrganizationName": "NC",
+        "AuxBillingCity": "CA",
+        "TechFirstName": "John",
+        "TechLastName": "Smith",
+        "TechAddress1": "8939 S.cross Blvd",
+        "TechStateProvince": "CA",
+        "TechPostalCode": "90045",
+        "TechCountry": "US",
+        "TechPhone": " 1.6613102107",
+        "TechEmailAddress": "john@gmail.com",
+        "TechOrganizationName": "NC",
+        "TechCity": "CA",
+        "AdminFirstName": "John",
+        "AdminLastName": "Smith",
+        "AdminAddress1": "8939%cross Blvd",
+        "AdminStateProvince": "CA",
+        "AdminPostalCode": "9004",
+        "AdminCountry": "US",
+        "AdminPhone": " 1.6613102107",
+        "AdminEmailAddress": "joe@gmail.com",
+        "AdminOrganizationName": "NC",
+        "AdminCity": "CA",
+        "RegistrantFirstName": "John",
+        "RegistrantLastName": "Smith",
+        "RegistrantAddress1": "8939 S.cross Blvd",
+        "RegistrantStateProvince": "CS",
+        "RegistrantPostalCode": "90045",
+        "RegistrantCountry": "US",
+        "RegistrantPhone": " 1.6613102107",
+        "RegistrantEmailAddress": "jo@gmail.com",
+        "RegistrantOrganizationName": "NC",
+        "RegistrantCity": "CA",
+        "AddFreeWhoisguard": "no",
+        "WGEnabled": "no",
+        "GenerateAdminOrderRefId": "False",
+        "IsPremiumDomain": "True",
+        "PremiumPrice": "206.7",
+        "EapFee": "0"
+    },
+    "namecheap.domains.getContacts": {
+        "DomainName": "domain1.com"
+    },
+    "namecheap.domains.getinfo": {
+        "DomainName": "domain1.com"
+    },
+    "namecheap.domains.getList": {},
+    "namecheap.domains.getRegistrarLock": {
+        "DomainName": "domain1.com"
+    },
+    "namecheap.domains.getTldList": {},
+    "namecheap.domains.reactivate": {
+        "DomainName": "models.tv",
+        "YearsToAdd": "1",
+        "IsPremiumDomain": "true",
+        "premiumprice": "650"
+    },
+    "namecheap.domains.renew": {
+        "DomainName": "models.tv",
+        "Years": "1",
+        "IsPremiumDomain": "true",
+        "PremiumPrice": "650"
+    },
+    "namecheap.domains.setContacts": {
+        "DomainName": "domain1.com",
+        "AuxBillingFirstName": "Daisy",
+        "AuxBillingLastName": "Smith",
+        "AuxBillingAddress1": "8939 S.cross Blvd",
+        "AuxBillingCity": "califonia",
+        "AuxBillingOrganizationName": "Org1",
+        "AuxBillingStateProvince": "CA",
+        "AuxBillingPostalCode": "90045",
+        "AuxBillingCountry": "US",
+        "AuxBillingPhone": " 1.6613102107",
+        "AuxBillingEmailAddress": "john@gmail.com",
+        "TechFirstName": "Daisy",
+        "TechLastName": "Smith",
+        "TechAddress1": "8939 S.cross Blvd",
+        "TechStateProvince": "CA",
+        "TechCity": "california",
+        "TechPostalCode": "90045",
+        "TechOrganizationName": "Org1",
+        "TechCountry": "US",
+        "TechPhone": " 1.6613102107",
+        "TechEmailAddress": "john@gmail.com",
+        "AdminFirstName": "Daisy",
+        "AdminLastName": "Smith",
+        "AdminAddress1": "8939 S.cross Blvd",
+        "AdminStateProvince": "CA",
+        "AdminPostalCode": "90045",
+        "AdminOrganizationName": "org1",
+        "AdminCountry": "US",
+        "AdminPhone": " 1.6613102107",
+        "AdminCity": "california",
+        "AdminEmailAddress": "john@gmail.com",
+        "RegistrantFirstName": "Daisy",
+        "RegistrantLastName": "Smith",
+        "RegistrantAddress1": "8939 S.cross Blvd",
+        "RegistrantStateProvince": "CA",
+        "RegistrantPostalCode": "90045",
+        "RegistrantCountry": "US",
+        "RegistrantPhone": " 1.6613102107",
+        "RegistrantEmailAddress": "john@gmail.com",
+        "RegistrantCity": "california",
+        "RegistrantOrganizationName": "Org1"
+    },
+    "namecheap.domains.setRegistrarLock": {
+        "DomainName": "domain1.com",
+        "LockAction": "unlock"
+    },
+    "namecheap.ssl.create": {
+        "Years": "2",
+        "Type": "PositiveSSL"
+    },
+    "namecheap.ssl.editDCVMethod": {
+        "certificateID": "743585",
+        "DNSNames": "example.com,example.net,example.org",
+        "DCVMethods": "CNAME_CSR_HASH,HTTP_CSR_HASH,admin@example.org"
+    },
+    "namecheap.ssl.getApproverEmailList": {
+        "domainname": "domain.com",
+        "CertificateType": "rapidssl"
+    },
+    "namecheap.ssl.getInfo": {
+        "certificateID": "743585",
+        "returncertificate": "true",
+        "returntype": "individual"
+    },
+    "namecheap.ssl.getList": {},
+    "namecheap.ssl.purchaseMoreSANS": {
+        "NumberofSANStoADD": "4",
+        "CertificateID": "1111"
+    },
+    "namecheap.ssl.renew": {
+        "certificateid": "501904",
+        "ssltype": "positivessl",
+        "years": "1"
+    },
+    "namecheap.ssl.resendApproverEmail": {
+        "CertificateID": "500532"
+    },
+    "namecheap.ssl.resendFulfillmentEmail": {
+        "CertificateID": "501513"
+    },
+    "namecheap.ssl.revokecertificate": {
+        "certificatetype": "positivessl",
+        "CertificateID": "8111110"
+    },
+    "namecheap.users.address.create": {
+        "AddressName": "address_test",
+        "EmailAddress": "apisample@gmail.com",
+        "FirstName": "Daisy",
+        "LastName": "Smith",
+        "JobTitle": "software developer",
+        "Organization": "NC",
+        "Address1": "High Street",
+        "City": "California",
+        "Zip": "90045",
+        "Country": "US",
+        "Phone": " 1.6613102107",
+        "Fax": " 1.6613102107",
+        "StateProvince": "CA",
+        "StateProvinceChoice": "P"
+    },
+    "namecheap.users.address.delete": {
+        "AddressId": "48"
+    },
+    "namecheap.users.address.getInfo": {
+        "AddressId": "48"
+    },
+    "namecheap.users.address.getList": {},
+    "namecheap.users.address.setDefault": {
+        "AddressId": "49"
+    },
+    "namecheap.users.address.update": {
+        "AddressId": "48",
+        "AddressName": "address_test",
+        "EmailAddress": "apidemo@gmail.com",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "JobTitle": "software developer",
+        "Organization": "NC",
+        "Address1": "High Street",
+        "City": "California",
+        "Zip": "90045",
+        "Country": "US",
+        "Phone": " 1.6613102107",
+        "Fax": " 1.6613102107",
+        "StateProvince": "CA",
+        "StateProvinceChoice": "P"
+    },
+    "namecheap.users.changePassword": {
+        "OldPassword": "NCpass09",
+        "NewPassword": "NCpass~9"
+    },
+    "namecheap.users.createAddfundsRequest": {
+        "paymenttype": "creditcard",
+        "amount": "40",
+        "returnurl": "http://www.yourdomain.com/payments.asp"
+    },
+    "namecheap.users.create": {
+        "newusername": "user12",
+        "newuserpassword": "newuser12",
+        "EmailAddress": "apisample@gmail.com",
+        "FirstName": "John",
+        "LastName": "Pearl",
+        "AcceptTerms": "1",
+        "AcceptNews": "0",
+        "JobTitle": "software developer",
+        "Organization": "NC",
+        "Address1": "8939 S. cross Blvd",
+        "Address2": "high street",
+        "City": "California",
+        "StateProvince": "CA",
+        "Zip": "90045",
+        "Country": "US",
+        "Phone": " 1.6613102107",
+        "Fax": " 1.6613102107"
+    },
+    "namecheap.users.getAddFundsStatus": {
+        "tokenid": "42a0c4f484c74d09a2edaasa5cb0fe28"
+    },
+    "namecheap.users.getBalances": {},
+    "namecheap.users.getPricing": {
+        "ProductType": "DOMAIN"
+    },
+    "namecheap.users.login": {
+        "Password": "NCpass09"
+    },
+    "namecheap.users.resetPassword": {
+        "findby": "username",
+        "findbyvalue": "sampleuser"
+    },
+    "namecheap.users.update": {
+        "JobTitle": "software tester",
+        "FirstName": "yourfirstname",
+        "LastName": "yourlastname",
+        "Organization": "NC",
+        "Address1": "8939%High Street",
+        "City": "CA",
+        "StateProvince": "CA",
+        "Zip": "90045",
+        "Country": "US",
+        "EmailAddress": "abc@apiexample.com",
+        "Phone": " 1.6613102107",
+        "Fax": " 1.6613102107"
+    },
+    "namecheap.whoisguard.allot": {
+        "DomainName": "domain1.com",
+        "whoisguardid": "5924316"
+    },
+    "namecheap.whoisguard.changeEmailAddress": {
+        "whoisguardid": "5924316"
+    },
+    "namecheap.whoisguard.disable": {
+        "whoisguardid": "5924316"
+    },
+    "namecheap.whoisguard.discard": {
+        "whoisguardid": "5924316"
+    },
+    "namecheap.whoisguard.enable": {
+        "whoisguardid": "5924316",
+        "forwardedtoemail": "xyz@gmail.com"
+    },
+    "namecheap.whoisguard.getList": {},
+    "namecheap.whoisguard.renew": {
+        "Whoisguardid": "38495",
+        "Years": "1"
+    },
+    "namecheap.whoisguard.unallot": {
+        "whoisguardid": "5924316"
+    }
+}
