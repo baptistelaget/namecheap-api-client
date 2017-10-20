@@ -1,7 +1,6 @@
 'use strict';
-const config = require('../lib/config');
-config.setAll(require('./test.config.json'));
-config.setSandbox(true);
+const parsingHandler = require('../lib/parsing.response.handler');
+
 const NcClient = require('../lib/NcClient');
 
-module.exports = new NcClient(config);
+module.exports = new NcClient(require('./test.config'), parsingHandler);
