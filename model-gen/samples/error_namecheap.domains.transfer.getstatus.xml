@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="4019329">Domain transfer info is not available or not found.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.domains.transfer.getstatus</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.transfer.getStatus">
+    <DomainTransferGetStatusResult TransferID="0" StatusID="0" StatusDate="0001-01-01T00:00:00" TransferOrderDate="0001-01-01T00:00:00" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.166</ExecutionTime>
+</ApiResponse>

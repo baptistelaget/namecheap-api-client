@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2011335">The password does not match the user account or the account does not exists. Please verify both the user name and password and try again.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.users.login</RequestedCommand>
+  <CommandResponse Type="namecheap.users.login">
+    <UserLoginResult LoginSuccess="false" UserID="0" IsInTargetGroup="0" IsPasswordOld="0" IsTwoFaEnabled="0" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.134</ExecutionTime>
+</ApiResponse>

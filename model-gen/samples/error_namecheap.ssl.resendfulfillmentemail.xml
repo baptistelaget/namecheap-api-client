@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2011294">CertificateID is not Valid</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.ssl.resendfulfillmentemail</RequestedCommand>
+  <CommandResponse Type="namecheap.ssl.resendFulfillmentEmail">
+    <SSLResendFulfillmentEmailResult ID="0" IsSuccess="false" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.015</ExecutionTime>
+</ApiResponse>

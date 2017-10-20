@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="3530407">This feature is no longer supported. Please contact customer support for more details.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.unallot</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.unallot">
+    <WhoisguardUnallotResult IsSuccess="false" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.007</ExecutionTime>
+</ApiResponse>

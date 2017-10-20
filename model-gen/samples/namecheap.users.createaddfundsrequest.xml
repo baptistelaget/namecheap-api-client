@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.users.createaddfundsrequest</RequestedCommand>
+  <CommandResponse Type="namecheap.users.createAddfundsRequest">
+    <Createaddfundsrequestresult TokenID="ae82ba80766a4b5d95ed6368284632f6" ReturnURL="https://www.sandbox.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=ae82ba80766a4b5d95ed6368284632f6" RedirectURL="https://www.sandbox.namecheap.com/myaccount/addfunds/Payment.aspx?tokenid=ae82ba80766a4b5d95ed6368284632f6" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.454</ExecutionTime>
+</ApiResponse>

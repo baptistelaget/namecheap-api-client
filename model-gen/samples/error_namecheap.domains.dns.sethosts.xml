@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2019166">The domain (domain51.com) doesn't seem to be associated with your account.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.domains.dns.sethosts</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.dns.setHosts">
+    <DomainDNSSetHostsResult Domain="domain51.com" EmailType="" IsSuccess="false">
+      <Warnings />
+    </DomainDNSSetHostsResult>
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.061</ExecutionTime>
+</ApiResponse>

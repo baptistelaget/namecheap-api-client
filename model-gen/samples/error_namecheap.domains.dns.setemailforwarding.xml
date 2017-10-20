@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2019166">Domain name not found</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.domains.dns.setemailforwarding</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.dns.setEmailForwarding">
+    <DomainDNSSetEmailForwardingResult Domain="domain.com" IsSuccess="false">
+      <Warnings />
+    </DomainDNSSetEmailForwardingResult>
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.35</ExecutionTime>
+</ApiResponse>

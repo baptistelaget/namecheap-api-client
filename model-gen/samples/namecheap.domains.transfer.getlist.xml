@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.domains.transfer.getlist</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.transfer.getList">
+    <TransferGetListResult>
+      <Transfer ID="46053" DomainName="domain.com" User="octhuber" TransferDate="10/20/2017" OrderID="" StatusID="-1" Status="QUEUED" StatusDate="10/20/2017" StatusDescription="Queued for Transfer" />
+    </TransferGetListResult>
+    <Paging>
+      <TotalItems>1</TotalItems>
+      <CurrentPage>1</CurrentPage>
+      <PageSize>10</PageSize>
+    </Paging>
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.064</ExecutionTime>
+</ApiResponse>

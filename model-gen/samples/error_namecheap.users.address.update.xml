@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="4011331">Unable to update address</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.users.address.update</RequestedCommand>
+  <CommandResponse Type="namecheap.users.address.update" />
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.232</ExecutionTime>
+</ApiResponse>

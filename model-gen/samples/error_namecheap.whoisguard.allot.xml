@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2029331">THE WHOISGUARD IS EITHER INVALID OR NOT ASSOCIATED WITH YOUR ACCOUNT</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.allot</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.allot">
+    <WhoisguardAllotResult ID="0" IsSuccess="false" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.357</ExecutionTime>
+</ApiResponse>

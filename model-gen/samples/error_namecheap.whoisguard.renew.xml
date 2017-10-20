@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="4029331">This Whoisguard is not associate with this User . So cannot Renew.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.renew</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.renew">
+    <WhoisguardRenewResult WhoisguardId="0" Years="0" Renew="false" OrderId="0" TransactionId="0" ChargedAmount="0" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.387</ExecutionTime>
+</ApiResponse>

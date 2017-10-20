@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2016166">The domain (models.tv) doesn't seem to be associated with your account.</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.domains.renew</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.renew">
+    <DomainRenewResult DomainID="0" OrderID="0" TransactionID="0" ChargedAmount="0" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.297</ExecutionTime>
+</ApiResponse>

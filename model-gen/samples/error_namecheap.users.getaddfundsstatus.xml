@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="2012342">Tokenid mismatch</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.users.getaddfundsstatus</RequestedCommand>
+  <CommandResponse Type="namecheap.users.getAddFundsStatus">
+    <GetAddFundsStatusResult TransactionID="0" Amount="0" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.196</ExecutionTime>
+</ApiResponse>

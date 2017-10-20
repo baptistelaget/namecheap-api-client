@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.users.getbalances</RequestedCommand>
+  <CommandResponse Type="namecheap.users.getBalances">
+    <UserGetBalancesResult Currency="USD" AvailableBalance="8972.23" AccountBalance="8972.23" EarnedAmount="0.00" WithdrawableAmount="0.00" FundsRequiredForAutoRenew="0.00" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.028</ExecutionTime>
+</ApiResponse>

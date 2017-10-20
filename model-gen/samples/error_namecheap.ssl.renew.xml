@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+ <Errors>
+  <Error Number="4011294">CertificateID is invalid</Error>
+ </Errors>
+ <Warnings/>
+ <RequestedCommand>namecheap.ssl.renew</RequestedCommand>
+ <CommandResponse Type="namecheap.ssl.renew">
+  <SSLRenewResult CertificateID="0" Years="0" OrderId="0" TransactionId="0" ChargedAmount="0"/>
+ </CommandResponse>
+ <Server>932312f00f0e</Server>
+ <GMTTimeDifference>--5:00</GMTTimeDifference>
+ <ExecutionTime>0.219</ExecutionTime>
+</ApiResponse>

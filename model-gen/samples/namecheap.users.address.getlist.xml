@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.users.address.getlist</RequestedCommand>
+  <CommandResponse Type="namecheap.users.address.getList">
+    <AddressGetListResult>
+      <List AddressId="0" AddressName="Primary Address" IsDefault="true" />
+      <List AddressId="99625" AddressName="address_test" IsDefault="false" />
+    </AddressGetListResult>
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.017</ExecutionTime>
+</ApiResponse>

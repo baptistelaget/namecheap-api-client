@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+ <Errors>
+  <Error Number="2011301">We're sorry, the requested SSL type has been discontinued</Error>
+ </Errors>
+ <Warnings/>
+ <RequestedCommand>namecheap.ssl.getApproverEmailList</RequestedCommand>
+ <CommandResponse Type="namecheap.ssl.getApproverEmailList"/>
+ <Server>932312f00f0e</Server>
+ <GMTTimeDifference>--5:00</GMTTimeDifference>
+ <ExecutionTime>0.020</ExecutionTime>
+</ApiResponse>

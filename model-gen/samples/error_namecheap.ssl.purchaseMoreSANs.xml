@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+ <Errors>
+  <Error Number="2011294">CertificateId is not valid</Error>
+ </Errors>
+ <Warnings/>
+ <RequestedCommand>namecheap.ssl.purchaseMoreSANs</RequestedCommand>
+ <CommandResponse Type="namecheap.ssl.purchaseMoreSANs">
+  <SSLPurchaseMoreSANSResult IsSuccess="false" OrderId="0" TransactionId="0" ChargedAmount="0"/>
+ </CommandResponse>
+ <Server>deec8bbbaeef</Server>
+ <GMTTimeDifference>--5:00</GMTTimeDifference>
+ <ExecutionTime>0.227</ExecutionTime>
+</ApiResponse>

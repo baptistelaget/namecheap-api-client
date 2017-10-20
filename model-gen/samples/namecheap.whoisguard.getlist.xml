@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.whoisguard.getlist</RequestedCommand>
+  <CommandResponse Type="namecheap.whoisguard.getList">
+    <WhoisguardGetListResult />
+    <Paging>
+      <TotalItems>0</TotalItems>
+      <CurrentPage>1</CurrentPage>
+      <PageSize>20</PageSize>
+    </Paging>
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>0.477</ExecutionTime>
+</ApiResponse>

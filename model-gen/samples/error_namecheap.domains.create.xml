@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="ERROR" xmlns="http://api.namecheap.com/xml.response">
+  <Errors>
+    <Error Number="3031166">Domain name not available</Error>
+  </Errors>
+  <Warnings />
+  <RequestedCommand>namecheap.domains.create</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.create">
+    <DomainCreateResult Domain="aa.us.com" Registered="false" ChargedAmount="0" DomainID="0" OrderID="1095892" TransactionID="1590799" WhoisguardEnable="false" FreePositiveSSL="false" NonRealTimeDomain="false" />
+  </CommandResponse>
+  <Server>PHX01SBAPI02</Server>
+  <GMTTimeDifference>--7:00</GMTTimeDifference>
+  <ExecutionTime>6.34</ExecutionTime>
+</ApiResponse>
