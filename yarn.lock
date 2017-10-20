@@ -39,7 +39,7 @@
     "@types/bluebird" "*"
     "@types/request" "*"
 
-"@types/request@*", "@types/request@^2.0.6":
+"@types/request@*":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/request/-/request-2.0.6.tgz#fe05b206f8ef6378da236698421e904685fcc001"
   dependencies:
@@ -528,7 +528,7 @@ qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
-readable-stream@^2.0.2:
+readable-stream@^2.0.2, readable-stream@^2.1.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
   dependencies:
@@ -646,6 +646,13 @@ sshpk@^1.7.0:
 stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+
+string-to-stream@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/string-to-stream/-/string-to-stream-1.1.0.tgz#acf2c9ead1c418e148509a12d2cbb469f333a218"
+  dependencies:
+    inherits "^2.0.1"
+    readable-stream "^2.1.0"
 
 string_decoder@~1.0.3:
   version "1.0.3"
