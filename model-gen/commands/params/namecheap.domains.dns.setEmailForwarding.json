@@ -1,0 +1,7 @@
+{
+    "DomainName": "domain.com",
+    "mailbox1": "info",
+    "ForwardTo1": "domaininfo@gmail.com",
+    "mailbox2": "careers",
+    "ForwardTo2": "domaincareer@gmail.com"
+}

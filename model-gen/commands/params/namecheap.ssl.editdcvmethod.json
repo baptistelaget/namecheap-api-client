@@ -1,0 +1,5 @@
+{
+    "certificateID": "743585",
+    "DNSNames": "example.com,example.net,example.org",
+    "DCVMethods": "CNAME_CSR_HASH,HTTP_CSR_HASH,admin@example.org"
+}

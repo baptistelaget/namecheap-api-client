@@ -1,0 +1,1 @@
+"https://api.namecheap.com/xml.response?ApiUser=apiexample&ApiKey=56b4c87ef4fd49cb96d915c0db68194&UserName=apiexample&Command=namecheap.domains.dns.setEmailForwarding&ClientIp=192.168.1.109&DomainName=domain.com&mailbox1=info&ForwardTo1=domaininfo@gmail.com&mailbox2=careers&ForwardTo2=domaincareer@gmail.com"

@@ -1,0 +1,5 @@
+{
+    "SLD": "domain",
+    "TLD": "com",
+    "NameServers": "dns1.name-servers.com,dns2.name-servers.com"
+}

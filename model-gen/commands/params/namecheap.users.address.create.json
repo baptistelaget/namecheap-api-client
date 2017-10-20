@@ -1,0 +1,16 @@
+{
+    "AddressName": "address_test",
+    "EmailAddress": "apisample@gmail.com",
+    "FirstName": "Daisy",
+    "LastName": "Smith",
+    "JobTitle": "software developer",
+    "Organization": "NC",
+    "Address1": "High Street",
+    "City": "California",
+    "Zip": "90045",
+    "Country": "US",
+    "Phone": " 1.6613102107",
+    "Fax": " 1.6613102107",
+    "StateProvince": "CA",
+    "StateProvinceChoice": "P"
+}

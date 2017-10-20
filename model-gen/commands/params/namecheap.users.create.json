@@ -1,0 +1,19 @@
+{
+    "newusername": "user12",
+    "newuserpassword": "newuser12",
+    "EmailAddress": "apisample@gmail.com",
+    "FirstName": "John",
+    "LastName": "Pearl",
+    "AcceptTerms": "1",
+    "AcceptNews": "0",
+    "JobTitle": "software developer",
+    "Organization": "NC",
+    "Address1": "8939 S. cross Blvd",
+    "Address2": "high street",
+    "City": "California",
+    "StateProvince": "CA",
+    "Zip": "90045",
+    "Country": "US",
+    "Phone": " 1.6613102107",
+    "Fax": " 1.6613102107"
+}

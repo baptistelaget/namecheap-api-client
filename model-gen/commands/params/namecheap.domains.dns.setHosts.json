@@ -1,0 +1,12 @@
+{
+    "SLD": "domain51",
+    "TLD": "com",
+    "HostName1": "@",
+    "RecordType1": "URL",
+    "Address1": "http://www.namecheap.com",
+    "TTL1": "100",
+    "HostName2": "mynewcomp",
+    "RecordType2": "A",
+    "Address2": "12.56.67.78",
+    "TTL2": "1000"
+}

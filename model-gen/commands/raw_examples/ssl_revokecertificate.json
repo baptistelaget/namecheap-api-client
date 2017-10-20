@@ -1,0 +1,1 @@
+"http://api.sandbox.namecheap.com/xml.response?ApiUser=apiexample&ApiKey=123456123456&UserName=apiexample&Command=namecheap.ssl.revokecertificate&certificatetype=positivessl&ClientIp=192.168.1.1&CertificateID=8111110"

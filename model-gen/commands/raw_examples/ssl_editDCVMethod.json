@@ -1,0 +1,1 @@
+"https://api.namecheap.com/xml.response?ApiUser=apiexample&ApiKey=abcdef16ddaa4451113320f3446456ceaf7&UserName=apiexample&ClientIp=192.168.1.1&Command=namecheap.ssl.editdcvmethod&certificateID=743585&DNSNames=example.com,example.net,example.org&DCVMethods=CNAME_CSR_HASH,HTTP_CSR_HASH,admin@example.org"

@@ -1,0 +1,1 @@
+"https://api.namecheap.com/xml.response?ApiUser=apiexample&ApiKey=56b4c87ef4fd49cb96d915c0db68194&UserName=apiexample&Command=namecheap.domains.ns.update&ClientIp=192.168.1.109&SLD=domain&TLD=com&Nameserver=ns1.domain.com&OldIP=192.165.15.103&IP=12.45.63.32"

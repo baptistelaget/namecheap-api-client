@@ -1,0 +1,1 @@
+"http://api.namecheap.com/xml.response?apiuser=demo&apikey=d41474b94e7d4536baabb074a09c96bd&username=demo&Command=namecheap.domains.dns.setHosts&ClientIp=122.178.155.204&SLD=domain51&TLD=com&HostName1=@&RecordType1=URL&Address1=http://www.namecheap.com&TTL1=100&HostName2=mynewcomp&RecordType2=A&Address2=12.56.67.78&TTL2=1000"

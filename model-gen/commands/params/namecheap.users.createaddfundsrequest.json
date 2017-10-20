@@ -1,0 +1,5 @@
+{
+    "paymenttype": "creditcard",
+    "amount": "40",
+    "returnurl": "http://www.yourdomain.com/payments.asp"
+}
