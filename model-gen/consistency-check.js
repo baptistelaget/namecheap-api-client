@@ -3,14 +3,14 @@ Promise = require('bluebird');
 const fs = require('fs');
 const path = require('path');
 const cxml = require('cxml');
-const ncModel = require('../model/namecheap.api');
+const namecheapModel = require('../model/namecheap.api');
 
 const examplesDir = path.resolve(__dirname, 'examples');
 
 function checkExample(exampleFile) {
     const exampleRS = fs.createReadStream(path.join(examplesDir, exampleFile));
 
-    return new cxml.Parser().parse(exampleRS, ncModel.document)
+    return new cxml.Parser().parse(exampleRS, namecheapModel.document)
                             .then(result => console.assert(
                                 result
                                 && Object.keys(result.ApiResponse.CommandResponse)
