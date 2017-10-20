@@ -1,5 +1,8 @@
+import * as Primitive from './xml-primitives';
+
 // Source files:
 // file://model-gen/schema/namecheap.api.xsd
+
 
 interface BaseType {
     _exists: boolean;
@@ -78,12 +81,12 @@ interface AdminType extends _AdminType {
 
 interface _ApiResponseType extends BaseType {
     Status: string;
-    CommandResponse: CommandResponseType;
+    CommandResponse?: CommandResponseType;
     Errors: ErrorsType;
-    ExecutionTime: number;
-    GMTTimeDifference: string;
-    RequestedCommand: string;
-    Server: string;
+    ExecutionTime?: number;
+    GMTTimeDifference?: string;
+    RequestedCommand?: string;
+    Server?: string;
     Warnings?: WarningsType;
 }
 
@@ -162,7 +165,7 @@ interface _CommandResponseType extends BaseType {
     AddressGetListResult?: AddressGetListResultType[];
     AddressSetDefaultResult?: AddressSetDefaultResultType[];
     AddressUpdateResult?: AddressUpdateResultType[];
-    CreatAddFundsRequestResult?: CreatAddFundsRequestResultType[];
+    CreateAddFundsRequestResult?: CreateAddFundsRequestResultType[];
     DomainCheckResult?: DomainCheckResultType[];
     DomainContactsResult?: DomainContactsResultType[];
     DomainCreateResult?: DomainCreateResultType[];
@@ -226,12 +229,13 @@ interface CommandResponseType extends _CommandResponseType {
     constructor: { new(): CommandResponseType };
 }
 
-interface _CreatAddFundsRequestResultType extends BaseType {
+interface _CreateAddFundsRequestResultType extends BaseType {
+    RedirectURL: string;
     ReturnURL: string;
 }
 
-interface CreatAddFundsRequestResultType extends _CreatAddFundsRequestResultType {
-    constructor: { new(): CreatAddFundsRequestResultType };
+interface CreateAddFundsRequestResultType extends _CreateAddFundsRequestResultType {
+    constructor: { new(): CreateAddFundsRequestResultType };
 }
 
 interface _CSRDetailsType extends BaseType {
@@ -594,13 +598,22 @@ interface DomainType extends _DomainType {
 }
 
 interface _ErrorsType extends BaseType {
+    Error?: ErrorType[];
 }
 
 interface ErrorsType extends _ErrorsType {
     constructor: { new(): ErrorsType };
 }
 
-interface _ForwardType extends BaseType {
+interface _ErrorType extends Primitive._string {
+    Number: number;
+}
+
+interface ErrorType extends _ErrorType {
+    constructor: { new(): ErrorType };
+}
+
+interface _ForwardType extends Primitive._string {
     mailbox: string;
 }
 
@@ -1006,7 +1019,7 @@ interface TldsType extends _TldsType {
     constructor: { new(): TldsType };
 }
 
-interface _TldType extends BaseType {
+interface _TldType extends Primitive._string {
     Category: string;
     IsApiRegisterable: boolean;
     IsApiRenewable: boolean;
@@ -1250,7 +1263,7 @@ export interface document extends BaseType {
     CommandResponse: CommandResponseType;
     CommonName: string;
     Country: string;
-    CreatAddFundsRequestResult: CreatAddFundsRequestResultType;
+    CreateAddFundsRequestResult: CreateAddFundsRequestResultType;
     CreatedDate: string;
     CSR: string;
     CSRDetails: CSRDetailsType;
@@ -1288,8 +1301,9 @@ export interface document extends BaseType {
     DomainTransferCreateResult: DomainTransferCreateResultType;
     DomainTransferGetStatusResult: DomainTransferGetStatusResultType;
     DomainTransferUpdateStatusResult: DomainTransferUpdateStatusResultType;
-    email: string[];
+    Email: string;
     EmailAddress: string;
+    Error: ErrorType;
     Errors: ErrorsType;
     ExecutionTime: number;
     ExpiredDate: string;

@@ -27,4 +27,4 @@ export interface _string extends BaseType {
 export interface document extends BaseType {
 }
 
-export var document: document;
+export let document: document;
