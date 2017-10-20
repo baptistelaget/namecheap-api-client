@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://api.namecheap.com/xml.response" xmlns:x="http://api.namecheap.com/xml.response">
+  <xs:element name="ApiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:Errors"/>
+        <xs:element minOccurs="0" ref="x:Warnings"/>
+        <xs:element ref="x:RequestedCommand"/>
+        <xs:element ref="x:CommandResponse"/>
+        <xs:element ref="x:Server"/>
+        <xs:element ref="x:GMTTimeDifference"/>
+        <xs:element ref="x:ExecutionTime"/>
+      </xs:sequence>
+      <xs:attribute name="Status" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Errors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Error"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Error">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Number" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestedCommand" type="xs:NCName"/>
+  <xs:element name="CommandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0">
+          <xs:element ref="x:DomainDNSGetListResult"/>
+          <xs:element ref="x:DomainDNSSetDefaultResult"/>
+          <xs:element ref="x:DomainDNSSetEmailForwardingResult"/>
+          <xs:element ref="x:WhoisguardUnallotResult"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="x:WhoisguardGetListResult"/>
+        <xs:choice minOccurs="0">
+          <xs:element ref="x:AddressCreateResult"/>
+          <xs:element ref="x:CreateAddFundsRequestResult"/>
+          <xs:element ref="x:Createaddfundsrequestresult"/>
+          <xs:element ref="x:DomainGetRegistrarLockResult"/>
+          <xs:element ref="x:DomainNSDeleteResult"/>
+          <xs:element ref="x:GetAddFundsStatusResult"/>
+          <xs:element ref="x:SSLGetInfoResult"/>
+          <xs:element ref="x:SSLParseCSRResult"/>
+          <xs:element ref="x:UserCreateResult"/>
+          <xs:element ref="x:UserGetBalancesResult"/>
+          <xs:element ref="x:UserLoginResult"/>
+          <xs:element ref="x:WhoisguardDiscardResult"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="x:DomainGetListResult"/>
+        <xs:element minOccurs="0" ref="x:DomainTransferGetStatusResult"/>
+        <xs:element minOccurs="0" ref="x:SSLListResult"/>
+        <xs:choice minOccurs="0">
+          <xs:element ref="x:DomainDNSSetHostsResult"/>
+          <xs:element ref="x:DomainSetRegistrarLockResult"/>
+          <xs:element ref="x:DomainTransferCreateResult"/>
+          <xs:element ref="x:SSLActivateResult"/>
+          <xs:element ref="x:SSLEditDCVMethodResult"/>
+          <xs:element ref="x:SSLPurchaseMoreSANSResult"/>
+          <xs:element ref="x:SSLReissueResult"/>
+          <xs:element ref="x:SSLResendApproverEmailResult"/>
+          <xs:element ref="x:SSLResendFulfillmentEmailResult"/>
+          <xs:element ref="x:Tlds"/>
+          <xs:element ref="x:UserChangePasswordResult"/>
+          <xs:element ref="x:UserGetPricingResult"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="x:TransferGetListResult"/>
+        <xs:choice minOccurs="0">
+          <xs:element ref="x:AddressDeleteResult"/>
+          <xs:element ref="x:AddressGetListResult"/>
+          <xs:element ref="x:AddressSetDefaultResult"/>
+          <xs:element ref="x:AddressUpdateResult"/>
+          <xs:element ref="x:DomainCheckResult"/>
+          <xs:element ref="x:DomainContactsResult"/>
+          <xs:element ref="x:DomainCreateResult"/>
+          <xs:element ref="x:DomainDNSGetEmailForwardingResult"/>
+          <xs:element ref="x:DomainDNSGetHostsResult"/>
+          <xs:element ref="x:DomainDNSSetCustomResult"/>
+          <xs:element ref="x:DomainGetInfoResult"/>
+          <xs:element ref="x:DomainNSCreateResult"/>
+          <xs:element ref="x:DomainNSInfoResult"/>
+          <xs:element ref="x:DomainNSUpdateResult"/>
+          <xs:element ref="x:DomainReactivateResult"/>
+          <xs:element ref="x:DomainRenewResult"/>
+          <xs:element ref="x:DomainSetContactResult"/>
+          <xs:element ref="x:DomainTransferUpdateStatusResult"/>
+          <xs:element ref="x:GetAddressInfoResult"/>
+          <xs:element ref="x:GetApproverEmailListResult"/>
+          <xs:element ref="x:Paging"/>
+          <xs:element ref="x:RevokeCertificateResult"/>
+          <xs:element ref="x:SSLCreateResult"/>
+          <xs:element ref="x:SSLRenewResult"/>
+          <xs:element ref="x:UserResetPasswordResult"/>
+          <xs:element ref="x:UserUpdateResult"/>
+          <xs:element ref="x:WhoisguardAllotResult"/>
+          <xs:element ref="x:WhoisguardChangeEmailAddressResult"/>
+          <xs:element ref="x:WhoisguardDisableResult"/>
+          <xs:element ref="x:WhoisguardEnableResult"/>
+          <xs:element ref="x:WhoisguardRenewResult"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="Type" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSGetListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Nameserver"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="IsUsingOurDNS" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nameserver" type="xs:NCName"/>
+  <xs:element name="DomainDNSSetDefaultResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="Updated" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSSetEmailForwardingResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:Warnings"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardUnallotResult">
+    <xs:complexType>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardGetListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Whoisguard"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressCreateResult">
+    <xs:complexType>
+      <xs:attribute name="AddressId" use="required" type="xs:integer"/>
+      <xs:attribute name="AddressName" use="required" type="xs:NCName"/>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAddFundsRequestResult">
+    <xs:complexType>
+      <xs:attribute name="RedirectURL" use="required" type="xs:anyURI"/>
+      <xs:attribute name="ReturnURL" use="required" type="xs:anyURI"/>
+      <xs:attribute name="TokenID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Createaddfundsrequestresult">
+    <xs:complexType>
+      <xs:attribute name="RedirectURL" use="required" type="xs:anyURI"/>
+      <xs:attribute name="ReturnURL" use="required" type="xs:anyURI"/>
+      <xs:attribute name="TokenID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainGetRegistrarLockResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" type="xs:NCName"/>
+      <xs:attribute name="IsClientDeleteProhibited" type="xs:boolean"/>
+      <xs:attribute name="IsClientHold" type="xs:boolean"/>
+      <xs:attribute name="IsClientUpdateProhibited" type="xs:boolean"/>
+      <xs:attribute name="RegistrarLockStatus" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainNSDeleteResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="Nameserver" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddFundsStatusResult">
+    <xs:complexType>
+      <xs:attribute name="Amount" use="required" type="xs:integer"/>
+      <xs:attribute name="Status" type="xs:NCName"/>
+      <xs:attribute name="TransactionID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLGetInfoResult">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="x:CertificateDetails"/>
+        <xs:element ref="x:Provider"/>
+      </xs:sequence>
+      <xs:attribute name="ActivationExpireDate"/>
+      <xs:attribute name="Expires"/>
+      <xs:attribute name="IssuedOn"/>
+      <xs:attribute name="OrderId" use="required" type="xs:integer"/>
+      <xs:attribute name="ReplacedBy" type="xs:integer"/>
+      <xs:attribute name="SANSCount" use="required" type="xs:integer"/>
+      <xs:attribute name="Status" type="xs:NCName"/>
+      <xs:attribute name="StatusDescription"/>
+      <xs:attribute name="Type" type="xs:NCName"/>
+      <xs:attribute name="Years" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CertificateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:CSR"/>
+        <xs:element ref="x:ApproverEmail"/>
+        <xs:element ref="x:CommonName"/>
+        <xs:element ref="x:AdministratorName"/>
+        <xs:element ref="x:AdministratorEmail"/>
+        <xs:element ref="x:Certificates"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CSR" type="xs:string"/>
+  <xs:element name="ApproverEmail" type="xs:string"/>
+  <xs:element name="AdministratorName" type="xs:string"/>
+  <xs:element name="AdministratorEmail" type="xs:string"/>
+  <xs:element name="Certificates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:Certificate"/>
+        <xs:element ref="x:CaCertificates"/>
+      </xs:sequence>
+      <xs:attribute name="CertificateReturned" use="required" type="xs:boolean"/>
+      <xs:attribute name="ReturnType" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CaCertificates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Certificate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Provider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:OrderID"/>
+        <xs:element ref="x:Name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderID" type="xs:integer"/>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="SSLParseCSRResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:CSRDetails"/>
+        <xs:element ref="x:HttpDCValidation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CSRDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:CommonName"/>
+        <xs:element ref="x:DomainName"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:OrganisationUnit"/>
+        <xs:element ref="x:Organisation"/>
+        <xs:element ref="x:ValidTrueDomain"/>
+        <xs:element ref="x:State"/>
+        <xs:element ref="x:Locality"/>
+        <xs:element ref="x:Email"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainName" type="xs:NCName"/>
+  <xs:element name="OrganisationUnit" type="xs:NCName"/>
+  <xs:element name="Organisation" type="xs:NCName"/>
+  <xs:element name="ValidTrueDomain" type="xs:boolean"/>
+  <xs:element name="State" type="xs:NCName"/>
+  <xs:element name="Locality" type="xs:NCName"/>
+  <xs:element name="UserCreateResult">
+    <xs:complexType>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+      <xs:attribute name="UserId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserGetBalancesResult">
+    <xs:complexType>
+      <xs:attribute name="AccountBalance" use="required" type="xs:decimal"/>
+      <xs:attribute name="AvailableBalance" use="required" type="xs:decimal"/>
+      <xs:attribute name="Currency" use="required" type="xs:NCName"/>
+      <xs:attribute name="EarnedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="FundsRequiredForAutoRenew" use="required" type="xs:decimal"/>
+      <xs:attribute name="WithdrawableAmount" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserLoginResult">
+    <xs:complexType>
+      <xs:attribute name="IsInTargetGroup" type="xs:integer"/>
+      <xs:attribute name="IsPasswordOld" type="xs:integer"/>
+      <xs:attribute name="IsTwoFaEnabled" type="xs:integer"/>
+      <xs:attribute name="LoginSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="UserID" type="xs:integer"/>
+      <xs:attribute name="UserName" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardDiscardResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainGetListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Domain">
+    <xs:complexType>
+      <xs:attribute name="AutoRenew" use="required" type="xs:boolean"/>
+      <xs:attribute name="Created" use="required"/>
+      <xs:attribute name="Expires" use="required"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsExpired" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsLocked" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsOurDNS" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsPremium" use="required" type="xs:boolean"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+      <xs:attribute name="User" use="required" type="xs:NCName"/>
+      <xs:attribute name="WhoisGuard" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainTransferGetStatusResult">
+    <xs:complexType>
+      <xs:attribute name="Status"/>
+      <xs:attribute name="StatusDate" type="xs:NMTOKEN"/>
+      <xs:attribute name="StatusID" use="required" type="xs:integer"/>
+      <xs:attribute name="TransferID" use="required" type="xs:integer"/>
+      <xs:attribute name="TransferOrderDate" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:SSL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSL">
+    <xs:complexType>
+      <xs:attribute name="ActivationExpireDate" use="required"/>
+      <xs:attribute name="CertificateID" use="required" type="xs:integer"/>
+      <xs:attribute name="ExpireDate" use="required"/>
+      <xs:attribute name="HostName" use="required"/>
+      <xs:attribute name="IsExpiredYN" use="required" type="xs:boolean"/>
+      <xs:attribute name="ProviderOrderID"/>
+      <xs:attribute name="PurchaseDate" use="required"/>
+      <xs:attribute name="SSLType" use="required" type="xs:NCName"/>
+      <xs:attribute name="Status" use="required" type="xs:NCName"/>
+      <xs:attribute name="Years" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSSetHostsResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:Warnings"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="EmailType"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainSetRegistrarLockResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" type="xs:NCName"/>
+      <xs:attribute name="IsClientDeleteProhibitedUpdated" type="xs:boolean"/>
+      <xs:attribute name="IsClientHoldUpdated" type="xs:boolean"/>
+      <xs:attribute name="IsClientUpdateProhibitedUpdated" type="xs:boolean"/>
+      <xs:attribute name="IsRegistrarLockStatusUpdated" type="xs:boolean"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="RegistrarLockStatus" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainTransferCreateResult">
+    <xs:complexType>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="Domainname" type="xs:NCName"/>
+      <xs:attribute name="OrderID" use="required" type="xs:integer"/>
+      <xs:attribute name="StatusCode" use="required" type="xs:integer"/>
+      <xs:attribute name="StatusID" use="required" type="xs:integer"/>
+      <xs:attribute name="TransactionID" use="required" type="xs:integer"/>
+      <xs:attribute name="Transfer" use="required" type="xs:boolean"/>
+      <xs:attribute name="TransferID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLActivateResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLEditDCVMethodResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="x:HttpDCValidation"/>
+          <xs:element ref="x:DNSDCValidation"/>
+        </xs:sequence>
+        <xs:element ref="x:Domains"/>
+      </xs:sequence>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DNSDCValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:HostName"/>
+        <xs:element ref="x:Target"/>
+      </xs:sequence>
+      <xs:attribute name="ValueAvailable" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HostName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Target">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Domains">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="SSLPurchaseMoreSANSResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:SSLCertificate"/>
+      </xs:sequence>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="OrderId" use="required" type="xs:integer"/>
+      <xs:attribute name="TransactionId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLReissueResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:HttpDCValidation"/>
+      </xs:sequence>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLResendApproverEmailResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLResendFulfillmentEmailResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tlds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Tld"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tld">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Categories"/>
+      </xs:sequence>
+      <xs:attribute name="AddGracePeriodDays" type="xs:integer"/>
+      <xs:attribute name="Category" use="required" type="xs:NCName"/>
+      <xs:attribute name="IsApiRegisterable" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsApiRenewable" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsApiTransferable" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsDisableModContact" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsDisableWGAllot" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsEppRequired" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsIncludeInExtendedSearchOnly" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsSupportsIDN" use="required" type="xs:boolean"/>
+      <xs:attribute name="MaxRegisterYears" use="required" type="xs:integer"/>
+      <xs:attribute name="MaxRenewYears" use="required" type="xs:integer"/>
+      <xs:attribute name="MaxTransferYears" use="required" type="xs:integer"/>
+      <xs:attribute name="MinRegisterYears" use="required" type="xs:integer"/>
+      <xs:attribute name="MinRenewYears" use="required" type="xs:integer"/>
+      <xs:attribute name="MinTransferYears" use="required" type="xs:integer"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+      <xs:attribute name="NonRealTime" use="required" type="xs:boolean"/>
+      <xs:attribute name="ProviderApiDelete" type="xs:boolean"/>
+      <xs:attribute name="ReactivateMaxDays" type="xs:integer"/>
+      <xs:attribute name="Registry"/>
+      <xs:attribute name="RenewalMaxDays" type="xs:integer"/>
+      <xs:attribute name="RenewalMinDays" type="xs:integer"/>
+      <xs:attribute name="SearchGroup"/>
+      <xs:attribute name="SequenceNumber" use="required" type="xs:integer"/>
+      <xs:attribute name="SubType"/>
+      <xs:attribute name="SupportsRegistrarLock" type="xs:boolean"/>
+      <xs:attribute name="TldState"/>
+      <xs:attribute name="Type" use="required" type="xs:NCName"/>
+      <xs:attribute name="WhoisVerification" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Categories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:TldCategory"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TldCategory">
+    <xs:complexType>
+      <xs:attribute name="Name" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="SequenceNumber" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserChangePasswordResult">
+    <xs:complexType>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+      <xs:attribute name="UserId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserGetPricingResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:ProductType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:ProductCategory"/>
+      </xs:sequence>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Product"/>
+      </xs:sequence>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Price"/>
+      </xs:sequence>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Price">
+    <xs:complexType>
+      <xs:attribute name="CouponPrice" use="required"/>
+      <xs:attribute name="Currency" use="required" type="xs:NCName"/>
+      <xs:attribute name="Duration" use="required" type="xs:integer"/>
+      <xs:attribute name="DurationType" use="required" type="xs:NCName"/>
+      <xs:attribute name="Price" use="required" type="xs:decimal"/>
+      <xs:attribute name="RegularPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="YourPrice" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferGetListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Transfer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transfer">
+    <xs:complexType>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="Domainname" type="xs:NCName"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="OrderID" use="required"/>
+      <xs:attribute name="Status" use="required" type="xs:NCName"/>
+      <xs:attribute name="StatusDate" use="required"/>
+      <xs:attribute name="StatusDescription" use="required"/>
+      <xs:attribute name="StatusID" use="required" type="xs:integer"/>
+      <xs:attribute name="TransferDate" use="required"/>
+      <xs:attribute name="User" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressDeleteResult">
+    <xs:complexType>
+      <xs:attribute name="ProfileId" use="required" type="xs:integer"/>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+      <xs:attribute name="UserName" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressGetListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:List"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List">
+    <xs:complexType>
+      <xs:attribute name="AddressId" use="required" type="xs:integer"/>
+      <xs:attribute name="AddressName" use="required"/>
+      <xs:attribute name="IsDefault" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressSetDefaultResult">
+    <xs:complexType>
+      <xs:attribute name="AddressId" use="required" type="xs:integer"/>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressUpdateResult">
+    <xs:complexType>
+      <xs:attribute name="AddressId" use="required" type="xs:integer"/>
+      <xs:attribute name="AddressName" use="required" type="xs:NCName"/>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainCheckResult">
+    <xs:complexType>
+      <xs:attribute name="Available" use="required" type="xs:boolean"/>
+      <xs:attribute name="Description" use="required"/>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="EapFee" use="required" type="xs:decimal"/>
+      <xs:attribute name="ErrorNo" use="required" type="xs:integer"/>
+      <xs:attribute name="IcannFee" use="required" type="xs:decimal"/>
+      <xs:attribute name="IsPremiumName" use="required" type="xs:boolean"/>
+      <xs:attribute name="PremiumRegistrationPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="PremiumRenewalPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="PremiumRestorePrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="PremiumTransferPrice" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainContactsResult">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="x:Registrant"/>
+        <xs:element ref="x:Tech"/>
+        <xs:element ref="x:Admin"/>
+        <xs:element ref="x:AuxBilling"/>
+        <xs:element ref="x:CurrentAttributes"/>
+        <xs:element ref="x:WhoisGuardContact"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required"/>
+      <xs:attribute name="domainnameid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisGuardContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:Registrant"/>
+        <xs:element ref="x:Tech"/>
+        <xs:element ref="x:Admin"/>
+        <xs:element ref="x:AuxBilling"/>
+        <xs:element ref="x:CurrentAttributes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainCreateResult">
+    <xs:complexType>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="DomainID" use="required" type="xs:integer"/>
+      <xs:attribute name="FreePositiveSSL" type="xs:boolean"/>
+      <xs:attribute name="NonRealTimeDomain" use="required" type="xs:boolean"/>
+      <xs:attribute name="OrderID" use="required" type="xs:integer"/>
+      <xs:attribute name="Registered" use="required" type="xs:boolean"/>
+      <xs:attribute name="TransactionID" use="required" type="xs:integer"/>
+      <xs:attribute name="WhoisguardEnable" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSGetEmailForwardingResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Forward"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Forward">
+    <xs:complexType mixed="true">
+      <xs:attribute name="mailbox" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSGetHostsResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Host"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" type="xs:NCName"/>
+      <xs:attribute name="IsUsingOurDNS" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Host">
+    <xs:complexType>
+      <xs:attribute name="Address" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="HostId" use="required" type="xs:integer"/>
+      <xs:attribute name="MXPref" use="required" type="xs:integer"/>
+      <xs:attribute name="Name" use="required"/>
+      <xs:attribute name="TTL" use="required" type="xs:integer"/>
+      <xs:attribute name="Type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDNSSetCustomResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" use="required"/>
+      <xs:attribute name="Updated" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainGetInfoResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:DomainDetails"/>
+        <xs:element ref="x:LockDetails"/>
+        <xs:element ref="x:Whoisguard"/>
+        <xs:element minOccurs="0" ref="x:PremiumDnsSubscription"/>
+        <xs:element ref="x:DnsDetails"/>
+        <xs:element ref="x:Modificationrights"/>
+      </xs:sequence>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsOwner" use="required" type="xs:boolean"/>
+      <xs:attribute name="IsPremium" use="required" type="xs:boolean"/>
+      <xs:attribute name="OwnerName" type="xs:NCName"/>
+      <xs:attribute name="Status" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockDetails">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="PremiumDnsSubscription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:UseAutoRenew"/>
+        <xs:element ref="x:SubscriptionId"/>
+        <xs:element ref="x:CreatedDate"/>
+        <xs:element ref="x:ExpirationDate"/>
+        <xs:element ref="x:IsActive"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UseAutoRenew" type="xs:boolean"/>
+  <xs:element name="SubscriptionId" type="xs:integer"/>
+  <xs:element name="ExpirationDate" type="xs:NMTOKEN"/>
+  <xs:element name="IsActive" type="xs:boolean"/>
+  <xs:element name="DnsDetails">
+    <xs:complexType>
+      <xs:attribute name="DynamicDNSStatus" type="xs:boolean"/>
+      <xs:attribute name="HostCount" type="xs:integer"/>
+      <xs:attribute name="IsFailover" type="xs:boolean"/>
+      <xs:attribute name="IsUsingOurDNS" type="xs:boolean"/>
+      <xs:attribute name="ProviderType" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modificationrights">
+    <xs:complexType>
+      <xs:attribute name="All" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainNSCreateResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" use="required"/>
+      <xs:attribute name="IP" type="xs:NMTOKEN"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="Nameserver" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainNSInfoResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:NameserverStatuses"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+      <xs:attribute name="IP" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="Nameserver" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NameserverStatuses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Status"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="DomainNSUpdateResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" use="required"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="Nameserver" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainReactivateResult">
+    <xs:complexType>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="Domain" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" type="xs:boolean"/>
+      <xs:attribute name="OrderID" use="required" type="xs:integer"/>
+      <xs:attribute name="TransactionID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainRenewResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:DomainDetails"/>
+      </xs:sequence>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="DomainID" use="required" type="xs:integer"/>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="OrderID" use="required" type="xs:integer"/>
+      <xs:attribute name="Renew" type="xs:boolean"/>
+      <xs:attribute name="TransactionID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainSetContactResult">
+    <xs:complexType>
+      <xs:attribute name="Domain" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainTransferUpdateStatusResult">
+    <xs:complexType>
+      <xs:attribute name="Resubmit" use="required" type="xs:boolean"/>
+      <xs:attribute name="TransferID" type="xs:integer"/>
+      <xs:attribute name="TransferId" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressInfoResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:AddressId"/>
+        <xs:element ref="x:UserName"/>
+        <xs:element ref="x:AddressName"/>
+        <xs:element ref="x:Default_YN"/>
+        <xs:element ref="x:FirstName"/>
+        <xs:element ref="x:LastName"/>
+        <xs:element ref="x:JobTitle"/>
+        <xs:element ref="x:Organization"/>
+        <xs:element ref="x:Address1"/>
+        <xs:element ref="x:Address2"/>
+        <xs:element ref="x:City"/>
+        <xs:element ref="x:StateProvince"/>
+        <xs:element ref="x:StateProvinceChoice"/>
+        <xs:element ref="x:Zip"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:Phone"/>
+        <xs:element ref="x:Fax"/>
+        <xs:element ref="x:PhoneExt"/>
+        <xs:element ref="x:EmailAddress"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressId" type="xs:integer"/>
+  <xs:element name="UserName" type="xs:NCName"/>
+  <xs:element name="AddressName" type="xs:NCName"/>
+  <xs:element name="Default_YN" type="xs:boolean"/>
+  <xs:element name="Organization" type="xs:NCName"/>
+  <xs:element name="Zip" type="xs:integer"/>
+  <xs:element name="GetApproverEmailListResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:Domainemails"/>
+        <xs:element ref="x:Genericemails"/>
+      </xs:sequence>
+      <xs:attribute name="Domain" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Domainemails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:Email"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Genericemails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="x:Email"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Paging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:TotalItems"/>
+        <xs:element ref="x:CurrentPage"/>
+        <xs:element ref="x:PageSize"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalItems" type="xs:integer"/>
+  <xs:element name="CurrentPage" type="xs:integer"/>
+  <xs:element name="PageSize" type="xs:integer"/>
+  <xs:element name="RevokeCertificateResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLCreateResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:SSLCertificate"/>
+      </xs:sequence>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="OrderId" use="required" type="xs:integer"/>
+      <xs:attribute name="TransactionId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLRenewResult">
+    <xs:complexType>
+      <xs:attribute name="CertificateID" use="required" type="xs:integer"/>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="OrderId" use="required" type="xs:integer"/>
+      <xs:attribute name="TransactionId" use="required" type="xs:integer"/>
+      <xs:attribute name="Years" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserResetPasswordResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:Email"/>
+      </xs:sequence>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserUpdateResult">
+    <xs:complexType>
+      <xs:attribute name="Success" use="required" type="xs:boolean"/>
+      <xs:attribute name="UserId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardAllotResult">
+    <xs:complexType>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardChangeEmailAddressResult">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+      <xs:attribute name="WGEmail"/>
+      <xs:attribute name="WGOldEmail"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardDisableResult">
+    <xs:complexType>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardEnableResult">
+    <xs:complexType>
+      <xs:attribute name="DomainName" type="xs:NCName"/>
+      <xs:attribute name="IsSuccess" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WhoisguardRenewResult">
+    <xs:complexType>
+      <xs:attribute name="ChargedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="OrderId" use="required" type="xs:integer"/>
+      <xs:attribute name="Renew" use="required" type="xs:boolean"/>
+      <xs:attribute name="TransactionId" use="required" type="xs:integer"/>
+      <xs:attribute name="WhoisguardId" use="required" type="xs:integer"/>
+      <xs:attribute name="Years" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Server" type="xs:NMTOKEN"/>
+  <xs:element name="GMTTimeDifference" type="xs:string"/>
+  <xs:element name="ExecutionTime" type="xs:decimal"/>
+  <xs:element name="Warnings">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Whoisguard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:ID"/>
+        <xs:element minOccurs="0" ref="x:ExpiredDate"/>
+      </xs:sequence>
+      <xs:attribute name="Created"/>
+      <xs:attribute name="DomainName"/>
+      <xs:attribute name="Enabled" type="xs:NCName"/>
+      <xs:attribute name="Expires"/>
+      <xs:attribute name="ID" type="xs:integer"/>
+      <xs:attribute name="Status" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID" type="xs:integer"/>
+  <xs:element name="CommonName" type="xs:NCName"/>
+  <xs:element name="Country" type="xs:NCName"/>
+  <xs:element name="Email" type="xs:string"/>
+  <xs:element name="HttpDCValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:FileName"/>
+        <xs:element ref="x:FileContent"/>
+      </xs:sequence>
+      <xs:attribute name="ValueAvailable" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileName" type="xs:NMTOKEN"/>
+  <xs:element name="FileContent" type="xs:string"/>
+  <xs:element name="Certificate">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:Certificate"/>
+      </xs:sequence>
+      <xs:attribute name="Type" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSLCertificate">
+    <xs:complexType>
+      <xs:attribute name="CertificateID" use="required" type="xs:integer"/>
+      <xs:attribute name="Created"/>
+      <xs:attribute name="Expires"/>
+      <xs:attribute name="SANSCount" type="xs:integer"/>
+      <xs:attribute name="SSLType" use="required"/>
+      <xs:attribute name="Status" use="required" type="xs:NCName"/>
+      <xs:attribute name="Years" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomainDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="x:CreatedDate"/>
+        <xs:element minOccurs="0" ref="x:ExpiredDate"/>
+        <xs:element minOccurs="0" ref="x:NumYears"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NumYears" type="xs:integer"/>
+  <xs:element name="Registrant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:OrganizationName"/>
+        <xs:element ref="x:JobTitle"/>
+        <xs:element ref="x:FirstName"/>
+        <xs:element ref="x:LastName"/>
+        <xs:element ref="x:Address1"/>
+        <xs:element ref="x:Address2"/>
+        <xs:element ref="x:City"/>
+        <xs:element ref="x:StateProvince"/>
+        <xs:element ref="x:StateProvinceChoice"/>
+        <xs:element ref="x:PostalCode"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:Phone"/>
+        <xs:element ref="x:Fax"/>
+        <xs:element ref="x:EmailAddress"/>
+        <xs:element ref="x:PhoneExt"/>
+      </xs:sequence>
+      <xs:attribute name="ReadOnly" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tech">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:OrganizationName"/>
+        <xs:element ref="x:JobTitle"/>
+        <xs:element ref="x:FirstName"/>
+        <xs:element ref="x:LastName"/>
+        <xs:element ref="x:Address1"/>
+        <xs:element ref="x:Address2"/>
+        <xs:element ref="x:City"/>
+        <xs:element ref="x:StateProvince"/>
+        <xs:element ref="x:StateProvinceChoice"/>
+        <xs:element ref="x:PostalCode"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:Phone"/>
+        <xs:element ref="x:Fax"/>
+        <xs:element ref="x:EmailAddress"/>
+        <xs:element ref="x:PhoneExt"/>
+      </xs:sequence>
+      <xs:attribute name="ReadOnly" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:OrganizationName"/>
+        <xs:element ref="x:JobTitle"/>
+        <xs:element ref="x:FirstName"/>
+        <xs:element ref="x:LastName"/>
+        <xs:element ref="x:Address1"/>
+        <xs:element ref="x:Address2"/>
+        <xs:element ref="x:City"/>
+        <xs:element ref="x:StateProvince"/>
+        <xs:element ref="x:StateProvinceChoice"/>
+        <xs:element ref="x:PostalCode"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:Phone"/>
+        <xs:element ref="x:Fax"/>
+        <xs:element ref="x:EmailAddress"/>
+        <xs:element ref="x:PhoneExt"/>
+      </xs:sequence>
+      <xs:attribute name="ReadOnly" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuxBilling">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x:OrganizationName"/>
+        <xs:element ref="x:JobTitle"/>
+        <xs:element ref="x:FirstName"/>
+        <xs:element ref="x:LastName"/>
+        <xs:element ref="x:Address1"/>
+        <xs:element ref="x:Address2"/>
+        <xs:element ref="x:City"/>
+        <xs:element ref="x:StateProvince"/>
+        <xs:element ref="x:StateProvinceChoice"/>
+        <xs:element ref="x:PostalCode"/>
+        <xs:element ref="x:Country"/>
+        <xs:element ref="x:Phone"/>
+        <xs:element ref="x:Fax"/>
+        <xs:element ref="x:EmailAddress"/>
+        <xs:element ref="x:PhoneExt"/>
+      </xs:sequence>
+      <xs:attribute name="ReadOnly" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurrentAttributes">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="x:RegistrantNexus"/>
+        <xs:element ref="x:RegistrantNexusCountry"/>
+        <xs:element ref="x:RegistrantPurpose"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrantNexus" type="xs:NCName"/>
+  <xs:element name="RegistrantNexusCountry">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="RegistrantPurpose" type="xs:NCName"/>
+  <xs:element name="CreatedDate" type="xs:string"/>
+  <xs:element name="FirstName" type="xs:NCName"/>
+  <xs:element name="LastName" type="xs:NCName"/>
+  <xs:element name="JobTitle" type="xs:string"/>
+  <xs:element name="Address1" type="xs:string"/>
+  <xs:element name="Address2" type="xs:string"/>
+  <xs:element name="City" type="xs:string"/>
+  <xs:element name="StateProvince" type="xs:NCName"/>
+  <xs:element name="StateProvinceChoice" type="xs:NCName"/>
+  <xs:element name="Phone" type="xs:decimal"/>
+  <xs:element name="Fax" type="xs:decimal"/>
+  <xs:element name="PhoneExt" type="xs:string"/>
+  <xs:element name="EmailAddress" type="xs:string"/>
+  <xs:element name="ExpiredDate" type="xs:string"/>
+  <xs:element name="OrganizationName" type="xs:NCName"/>
+  <xs:element name="PostalCode" type="xs:integer"/>
+</xs:schema>
