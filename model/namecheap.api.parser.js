@@ -1,16 +1,32 @@
 'use strict';
 const cxml = require('cxml');
 const ncApiModel = require('../model/namecheap.api');
-const stringToStream = require('string-to-stream');
 
 const _parser = new cxml.Parser();
 
-/**
- * @param {string} body
- * @returns *
- */
-function parse(body) {
-    return _parser.parse(stringToStream(body), ncApiModel.document);
+class ParseError extends Error {
+    constructor(body = '') {
+        super();
+        this.name = 'ParseError';
+        this.message = 'Unable to parse response';
+        this.body = body;
+        Error.captureStackTrace(this, this.constructor);
+    }
 }
 
-module.exports = {parse};
+/**
+ * @param {string | Readable} body
+ * @returns {Promise.<*>}
+ */
+function parse(body) {
+    let parsePromise;
+    try {
+        parsePromise = _parser.parse(body, ncApiModel.document);
+    } catch (e) {
+        parsePromise = Promise.reject(new ParseError(body));
+    }
+
+    return parsePromise;
+}
+
+module.exports = {parse, ParseError};
