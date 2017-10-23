@@ -9,7 +9,7 @@ const readdir = Promise.promisify(fs.readdir);
 
 const schemaPath = path.resolve(__dirname, 'schema', 'namecheap.api_sampled.xsd');
 
-// TODO RECOMPILE TRANG TO USE CONTENT INSTEAD OF MIXED TYPES.
+//TODO RECOMPILE TRANG TO USE CONTENT INSTEAD OF MIXED TYPES.
 const trangPath = path.resolve(__dirname, 'trang-20091111.jar');
 
 
