@@ -10,14 +10,13 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "cxml": "beaulac/cxml#fixes",
+    "debug": "^3.1.0",
     "lodash": "^4.17.4",
+    "node-cache": "^4.1.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "promise-throttle": "^0.3.1",
-    "cxsd": "beaulac/cxsd#master",
-    "cheerio": "^1.0.0-rc.2",
     "@types/bluebird": "^3.5.16",
     "@types/chai": "^4.0.4",
     "@types/chai-as-promised": "^7.1.0",
@@ -27,7 +26,10 @@
     "@types/request-promise": "^4.1.38",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "mocha": "^4.0.1"
+    "cheerio": "^1.0.0-rc.2",
+    "cxsd": "beaulac/cxsd#master",
+    "mocha": "^4.0.1",
+    "promise-throttle": "^0.3.1"
   },
   "resolutions": {
     "cget": "0.2.1"
