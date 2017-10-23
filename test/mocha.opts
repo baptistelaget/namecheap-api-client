@@ -1,0 +1,4 @@
+--ui bdd
+--recursive
+--timeout 5s
+--require ./test/chai.setup
