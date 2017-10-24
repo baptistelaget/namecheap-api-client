@@ -8,11 +8,11 @@ declare interface NcAPI {
 
     _client: NcClient;
 
-    checkDomains(...domains: string[]): Promise<{ response: DomainCheckResultType }>
+    checkDomains(...domains: string[]): Promise<{ DomainCheckResult: DomainCheckResultType[] }>
 
-    getDomainRegistrationPrice(tld: string): Promise<{ response: UserGetPricingResultType }>
+    getDomainRegistrationPrice(tld: string): Promise<{ UserGetPricingResult: UserGetPricingResultType }>
 
-    createDomain(domainParams: object): Promise<{ response: DomainCreateResultType }>
+    createDomain(domainParams: object): Promise<{ DomainCreateResult: DomainCreateResultType }>
 
     setClient(client: NcClient): void;
 }

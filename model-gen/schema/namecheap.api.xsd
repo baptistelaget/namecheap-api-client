@@ -74,12 +74,11 @@
                     <xs:element ref="x:UserGetPricingResult" />
                 </xs:choice>
                 <xs:element minOccurs="0" ref="x:TransferGetListResult" />
-                <xs:choice minOccurs="0">
+                <xs:choice>
                     <xs:element ref="x:AddressDeleteResult" />
                     <xs:element ref="x:AddressGetListResult" />
                     <xs:element ref="x:AddressSetDefaultResult" />
                     <xs:element ref="x:AddressUpdateResult" />
-                    <xs:element ref="x:DomainCheckResult" />
                     <xs:element ref="x:DomainContactsResult" />
                     <xs:element ref="x:DomainCreateResult" />
                     <xs:element ref="x:DomainDNSGetEmailForwardingResult" />
@@ -106,6 +105,7 @@
                     <xs:element ref="x:WhoisguardDisableResult" />
                     <xs:element ref="x:WhoisguardEnableResult" />
                     <xs:element ref="x:WhoisguardRenewResult" />
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="x:DomainCheckResult" />
                 </xs:choice>
             </xs:sequence>
             <xs:attribute name="Type" type="xs:NCName" />
@@ -634,21 +634,6 @@
             <xs:attribute name="Success" use="required" type="xs:boolean" />
         </xs:complexType>
     </xs:element>
-    <xs:element name="DomainCheckResult">
-        <xs:complexType>
-            <xs:attribute name="Available" use="required" type="xs:boolean" />
-            <xs:attribute name="Description" use="required" />
-            <xs:attribute name="Domain" use="required" type="xs:NCName" />
-            <xs:attribute name="EapFee" use="required" type="xs:decimal" />
-            <xs:attribute name="ErrorNo" use="required" type="xs:integer" />
-            <xs:attribute name="IcannFee" use="required" type="xs:decimal" />
-            <xs:attribute name="IsPremiumName" use="required" type="xs:boolean" />
-            <xs:attribute name="PremiumRegistrationPrice" use="required" type="xs:decimal" />
-            <xs:attribute name="PremiumRenewalPrice" use="required" type="xs:decimal" />
-            <xs:attribute name="PremiumRestorePrice" use="required" type="xs:decimal" />
-            <xs:attribute name="PremiumTransferPrice" use="required" type="xs:decimal" />
-        </xs:complexType>
-    </xs:element>
     <xs:element name="DomainContactsResult">
         <xs:complexType>
             <xs:sequence minOccurs="0">
@@ -988,6 +973,21 @@
             <xs:attribute name="TransactionId" use="required" type="xs:integer" />
             <xs:attribute name="WhoisguardId" use="required" type="xs:integer" />
             <xs:attribute name="Years" use="required" type="xs:integer" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DomainCheckResult">
+        <xs:complexType>
+            <xs:attribute name="Available" use="required" type="xs:boolean" />
+            <xs:attribute name="Description" use="required" />
+            <xs:attribute name="Domain" use="required" type="xs:NCName" />
+            <xs:attribute name="EapFee" use="required" type="xs:decimal" />
+            <xs:attribute name="ErrorNo" use="required" type="xs:integer" />
+            <xs:attribute name="IcannFee" use="required" type="xs:decimal" />
+            <xs:attribute name="IsPremiumName" use="required" type="xs:boolean" />
+            <xs:attribute name="PremiumRegistrationPrice" use="required" type="xs:decimal" />
+            <xs:attribute name="PremiumRenewalPrice" use="required" type="xs:decimal" />
+            <xs:attribute name="PremiumRestorePrice" use="required" type="xs:decimal" />
+            <xs:attribute name="PremiumTransferPrice" use="required" type="xs:decimal" />
         </xs:complexType>
     </xs:element>
     <xs:element name="Server" type="xs:NMTOKEN" />

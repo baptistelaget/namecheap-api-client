@@ -7,7 +7,7 @@ const execFile = Promise.promisify(require('child_process').execFile);
 const readdir = Promise.promisify(fs.readdir);
 
 
-const schemaPath = path.resolve(__dirname, 'schema', 'namecheap.api_sampled.xsd');
+const schemaPath = path.resolve(__dirname, 'schema', 'namecheap.api.xsd');
 
 const trangPath = path.resolve(__dirname, 'trang-20172310.jar');
 

@@ -3,7 +3,7 @@ import { NcCommand } from './commands/NcCommand';
 
 export type NcGlobalParam = 'ApiUser' | 'ApiKey' | 'UserName' | 'ClientIp';
 
-export interface NcConfig {
+declare interface NcConfig {
     set(key: string, value: string): void;
 
     setAll(config: {[k in NcGlobalParam]: string}): void;
@@ -17,4 +17,5 @@ export interface NcConfig {
     buildRequestOptions(command: NcCommand): RequestPromiseOptions
 }
 
-export = const config: NcConfig;
+const config: NcConfig;
+export = config;

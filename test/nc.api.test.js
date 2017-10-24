@@ -13,7 +13,7 @@ xdescribe('Namecheap API', function () {
             const checkResult = ncApi.checkDomains('namecheap.com', 'google.com');
 
             const assertions = [
-                checkResult.should.eventually.have.property('DomainCheckResult')
+                checkResult.should.eventually.have.property('DomainCheckResult').that.has.lengthOf(2)
             ];
 
             return Promise.all(assertions);
