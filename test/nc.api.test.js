@@ -5,7 +5,7 @@ const {randomString} = require('./fixtures/utils');
 
 /** Careful! These actually hit the Namecheap sandbox */
 
-xdescribe('Namecheap API', function () {
+describe('Namecheap API', function () {
 
     xdescribe('Domain Check', function () {
 
@@ -21,7 +21,7 @@ xdescribe('Namecheap API', function () {
 
     });
 
-    xdescribe('Get Pricing', function () {
+    describe('Get Pricing', function () {
         let timeToGetFromAPI = Number.MAX_SAFE_INTEGER;
 
         it('Returns info from API on first time', function () {
@@ -41,7 +41,9 @@ xdescribe('Namecheap API', function () {
 
             return Promise.all([
                                    pricingResult.then(() => (Date.now() - time).should.be.lessThan(timeToGetFromAPI)),
+                                   pricingResult.should.eventually.have.property('Type'),
                                    pricingResult.should.eventually.have.property('UserGetPricingResult')
+                                       .that.has.property('ProductType')
                                ]);
         });
 
