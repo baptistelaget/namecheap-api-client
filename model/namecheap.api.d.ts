@@ -1,7 +1,7 @@
 import * as Primitive from './xml-primitives';
 
 // Source files:
-// file://model-gen/schema/namecheap.api_sampled.xsd
+// file://model-gen/schema/namecheap.api.xsd
 
 
 interface BaseType {

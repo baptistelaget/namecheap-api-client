@@ -1,6 +1,6 @@
 'use strict';
 const cxml = require('cxml');
-const ncApiModel = require('../model/namecheap.api');
+const ncApiModel = require('./namecheap.api');
 
 const _parser = new cxml.Parser();
 
