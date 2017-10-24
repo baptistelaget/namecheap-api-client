@@ -16,3 +16,5 @@ export interface NcConfig {
 
     buildRequestOptions(command: NcCommand): RequestPromiseOptions
 }
+
+export = const config: NcConfig;
