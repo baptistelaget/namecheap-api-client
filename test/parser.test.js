@@ -5,7 +5,7 @@ const parser = require('../model/namecheap.api.parser');
 
 describe('API Response Parser', function () {
 
-    xit('Handles unrecognized properties', function () {
+    it('Handles unrecognized properties', function () {
         const readStream = fs.createReadStream(path.resolve(__dirname,
                                                             '..',
                                                             'model-gen',

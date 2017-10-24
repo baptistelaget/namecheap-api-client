@@ -17,3 +17,5 @@ function generateDefinitionsFromSchema(schemaPath) {
 }
 
 module.exports = {generateDefinitionsFromSchema};
+
+generateDefinitionsFromSchema('./schema/namecheap.api_sampled.xsd');

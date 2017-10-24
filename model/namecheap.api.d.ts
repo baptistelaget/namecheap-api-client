@@ -1,7 +1,7 @@
 import * as Primitive from './xml-primitives';
 
 // Source files:
-// file://model-gen/schema/namecheap.api.xsd
+// file://model-gen/schema/namecheap.api_sampled.xsd
 
 
 interface BaseType {
@@ -30,7 +30,7 @@ interface AddressDeleteResultType extends _AddressDeleteResultType {
 }
 
 interface _AddressGetListResultType extends BaseType {
-    List: ListType;
+    List: ListType[];
 }
 
 interface AddressGetListResultType extends _AddressGetListResultType {
@@ -81,12 +81,12 @@ interface AdminType extends _AdminType {
 
 interface _ApiResponseType extends BaseType {
     Status: string;
-    CommandResponse?: CommandResponseType;
+    CommandResponse: CommandResponseType;
     Errors: ErrorsType;
-    ExecutionTime?: number;
-    GMTTimeDifference?: string;
-    RequestedCommand?: string;
-    Server?: string;
+    ExecutionTime: number;
+    GMTTimeDifference: string;
+    RequestedCommand: string;
+    Server: string;
     Warnings?: WarningsType;
 }
 
@@ -125,6 +125,14 @@ interface CaCertificatesType extends _CaCertificatesType {
     constructor: { new(): CaCertificatesType };
 }
 
+interface _CategoriesType extends BaseType {
+    TldCategory?: TldCategoryType[];
+}
+
+interface CategoriesType extends _CategoriesType {
+    constructor: { new(): CategoriesType };
+}
+
 interface _CertificateDetailsType extends BaseType {
     AdministratorEmail: string;
     AdministratorName: string;
@@ -149,7 +157,7 @@ interface CertificatesType extends _CertificatesType {
     constructor: { new(): CertificatesType };
 }
 
-interface _CertificateType extends BaseType {
+interface _CertificateType extends Primitive._string {
     Type: string;
     Certificate?: CertificateType[];
 }
@@ -160,73 +168,82 @@ interface CertificateType extends _CertificateType {
 
 interface _CommandResponseType extends BaseType {
     Type: string;
-    AddressCreateResult?: AddressCreateResultType[];
-    AddressDeleteResult?: AddressDeleteResultType[];
-    AddressGetListResult?: AddressGetListResultType[];
-    AddressSetDefaultResult?: AddressSetDefaultResultType[];
-    AddressUpdateResult?: AddressUpdateResultType[];
-    CreateAddFundsRequestResult?: CreateAddFundsRequestResultType[];
-    DomainCheckResult?: DomainCheckResultType[];
-    DomainContactsResult?: DomainContactsResultType[];
-    DomainCreateResult?: DomainCreateResultType[];
-    DomainDNSGetEmailForwardingResult?: DomainDNSGetEmailForwardingResultType[];
-    DomainDNSGetHostsResult?: DomainDNSGetHostsResultType[];
-    DomainDNSGetListResult?: DomainDNSGetListResultType[];
-    DomainDNSSetCustomResult?: DomainDNSSetCustomResultType[];
-    DomainDNSSetDefaultResult?: DomainDNSSetDefaultResultType[];
-    DomainDNSSetEmailForwardingResult?: DomainDNSSetEmailForwardingResultType[];
-    DomainDNSSetHostsResult?: DomainDNSSetHostsResultType[];
-    DomainGetInfoResult?: DomainGetInfoResultType[];
-    DomainGetListResult?: DomainGetListResultType[];
-    DomainGetRegistrarLockResult?: DomainGetRegistrarLockResultType[];
-    DomainNSCreateResult?: DomainNSCreateResultType[];
-    DomainNSDeleteResult?: DomainNSDeleteResultType[];
-    DomainNSInfoResult?: DomainNSInfoResultType[];
-    DomainNSUpdateResult?: DomainNSUpdateResultType[];
-    DomainReactivateResult?: DomainReactivateResultType[];
-    DomainRenewResult?: DomainRenewResultType[];
-    DomainSetContactResult?: DomainSetContactResultType[];
-    DomainSetRegistrarLockResult?: DomainSetRegistrarLockResultType[];
-    DomainTransferCreateResult?: DomainTransferCreateResultType[];
-    DomainTransferGetStatusResult?: DomainTransferGetStatusResultType[];
-    DomainTransferUpdateStatusResult?: DomainTransferUpdateStatusResultType[];
-    GetAddFundsStatusResult?: GetAddFundsStatusResultType[];
-    GetAddressInfoResult?: GetAddressInfoResultType[];
-    GetApproverEmailListResult?: GetApproverEmailListResultType[];
-    Paging?: PagingType[];
-    RevokeCertificateResult?: RevokeCertificateResultType[];
-    SSLActivateResult?: SSLActivateResultType[];
-    SSLCreateResult?: SSLCreateResultType[];
-    SSLEditDCVMethodResult?: SSLEditDCVMethodResultType[];
-    SSLGetInfoResult?: SSLGetInfoResultType[];
-    SSLListResult?: SSLListResultType[];
-    SSLParseCSRResult?: SSLParseCSRResultType[];
-    SSLPurchaseMoreSANSResult?: SSLPurchaseMoreSANSResultType[];
-    SSLReissueResult?: SSLReissueResultType[];
-    SSLRenewResult?: SSLRenewResultType[];
-    SSLResendApproverEmailResult?: SSLResendApproverEmailResultType[];
-    SSLResendFulfillmentEmailResult?: SSLResendFulfillmentEmailResultType[];
-    Tlds?: TldsType[];
-    TransferGetListResult?: TransferGetListResultType[];
-    UserChangePasswordResult?: UserChangePasswordResultType[];
-    UserCreateResult?: UserCreateResultType[];
-    UserGetBalancesResult?: UserGetBalancesResultType[];
-    UserGetPricingResult?: UserGetPricingResultType[];
-    UserLoginResult?: UserLoginResultType[];
-    UserResetPasswordResult?: UserResetPasswordResultType[];
-    UserUpdateResult?: UserUpdateResultType[];
-    WhoisguardAllotResult?: WhoisguardAllotResultType[];
-    WhoisguardChangeEmailAddressResult?: WhoisguardChangeEmailAddressResultType[];
-    WhoisguardDisableResult?: WhoisguardDisableResultType[];
-    WhoisguardDiscardResult?: WhoisguardDiscardResultType[];
-    WhoisguardEnableResult?: WhoisguardEnableResultType[];
-    WhoisguardGetListResult?: WhoisguardGetListResultType[];
-    WhoisguardRenewResult?: WhoisguardRenewResultType[];
-    WhoisguardUnallotResult?: WhoisguardUnallotResultType[];
+    AddressCreateResult?: AddressCreateResultType;
+    AddressDeleteResult?: AddressDeleteResultType;
+    AddressGetListResult?: AddressGetListResultType;
+    AddressSetDefaultResult?: AddressSetDefaultResultType;
+    AddressUpdateResult?: AddressUpdateResultType;
+    Createaddfundsrequestresult?: CreateaddfundsrequestresultType[];
+    DomainCheckResult?: DomainCheckResultType;
+    DomainContactsResult?: DomainContactsResultType;
+    DomainCreateResult?: DomainCreateResultType;
+    DomainDNSGetEmailForwardingResult?: DomainDNSGetEmailForwardingResultType;
+    DomainDNSGetHostsResult?: DomainDNSGetHostsResultType;
+    DomainDNSGetListResult?: DomainDNSGetListResultType;
+    DomainDNSSetCustomResult?: DomainDNSSetCustomResultType;
+    DomainDNSSetDefaultResult?: DomainDNSSetDefaultResultType;
+    DomainDNSSetEmailForwardingResult?: DomainDNSSetEmailForwardingResultType;
+    DomainDNSSetHostsResult?: DomainDNSSetHostsResultType;
+    DomainGetInfoResult?: DomainGetInfoResultType;
+    DomainGetListResult?: DomainGetListResultType;
+    DomainGetRegistrarLockResult?: DomainGetRegistrarLockResultType;
+    DomainNSCreateResult?: DomainNSCreateResultType;
+    DomainNSDeleteResult?: DomainNSDeleteResultType;
+    DomainNSInfoResult?: DomainNSInfoResultType;
+    DomainNSUpdateResult?: DomainNSUpdateResultType;
+    DomainReactivateResult?: DomainReactivateResultType;
+    DomainRenewResult?: DomainRenewResultType;
+    DomainSetContactResult?: DomainSetContactResultType;
+    DomainSetRegistrarLockResult?: DomainSetRegistrarLockResultType;
+    DomainTransferCreateResult?: DomainTransferCreateResultType;
+    DomainTransferGetStatusResult?: DomainTransferGetStatusResultType;
+    DomainTransferUpdateStatusResult?: DomainTransferUpdateStatusResultType;
+    GetAddFundsStatusResult?: GetAddFundsStatusResultType;
+    GetAddressInfoResult?: GetAddressInfoResultType;
+    GetApproverEmailListResult?: GetApproverEmailListResultType;
+    Paging?: PagingType;
+    RevokeCertificateResult?: RevokeCertificateResultType;
+    SSLActivateResult?: SSLActivateResultType;
+    SSLCreateResult?: SSLCreateResultType;
+    SSLEditDCVMethodResult?: SSLEditDCVMethodResultType;
+    SSLGetInfoResult?: SSLGetInfoResultType;
+    SSLListResult?: SSLListResultType;
+    SSLParseCSRResult?: SSLParseCSRResultType;
+    SSLPurchaseMoreSANSResult?: SSLPurchaseMoreSANSResultType;
+    SSLReissueResult?: SSLReissueResultType;
+    SSLRenewResult?: SSLRenewResultType;
+    SSLResendApproverEmailResult?: SSLResendApproverEmailResultType;
+    SSLResendFulfillmentEmailResult?: SSLResendFulfillmentEmailResultType;
+    Tlds?: TldsType;
+    TransferGetListResult?: TransferGetListResultType;
+    UserChangePasswordResult?: UserChangePasswordResultType;
+    UserCreateResult?: UserCreateResultType;
+    UserGetBalancesResult?: UserGetBalancesResultType;
+    UserGetPricingResult?: UserGetPricingResultType;
+    UserLoginResult?: UserLoginResultType;
+    UserResetPasswordResult?: UserResetPasswordResultType;
+    UserUpdateResult?: UserUpdateResultType;
+    WhoisguardAllotResult?: WhoisguardAllotResultType;
+    WhoisguardChangeEmailAddressResult?: WhoisguardChangeEmailAddressResultType;
+    WhoisguardDisableResult?: WhoisguardDisableResultType;
+    WhoisguardDiscardResult?: WhoisguardDiscardResultType;
+    WhoisguardEnableResult?: WhoisguardEnableResultType;
+    WhoisguardGetListResult?: WhoisguardGetListResultType;
+    WhoisguardRenewResult?: WhoisguardRenewResultType;
+    WhoisguardUnallotResult?: WhoisguardUnallotResultType;
 }
 
 interface CommandResponseType extends _CommandResponseType {
     constructor: { new(): CommandResponseType };
+}
+
+interface _CreateaddfundsrequestresultType extends BaseType {
+    RedirectURL: string;
+    ReturnURL: string;
+}
+
+interface CreateaddfundsrequestresultType extends _CreateaddfundsrequestresultType {
+    constructor: { new(): CreateaddfundsrequestresultType };
 }
 
 interface _CreateAddFundsRequestResultType extends BaseType {
@@ -275,6 +292,10 @@ interface DNSDCValidationType extends _DNSDCValidationType {
 }
 
 interface _DnsDetailsType extends BaseType {
+    DynamicDNSStatus: boolean;
+    HostCount: number;
+    IsFailover: boolean;
+    IsUsingOurDNS: boolean;
     ProviderType: string;
 }
 
@@ -300,14 +321,12 @@ interface DomainCheckResultType extends _DomainCheckResultType {
 }
 
 interface _DomainContactsResultType extends BaseType {
-    Domain: string;
-    domainnameid: number;
-    Admin: AdminType;
-    AuxBilling: AuxBillingType;
-    CurrentAttributes: CurrentAttributesType;
-    Registrant: RegistrantType;
-    Tech: TechType;
-    WhoisGuardContact: WhoisGuardContactType;
+    Admin?: AdminType;
+    AuxBilling?: AuxBillingType;
+    CurrentAttributes?: CurrentAttributesType;
+    Registrant?: RegistrantType;
+    Tech?: TechType;
+    WhoisGuardContact?: WhoisGuardContactType;
 }
 
 interface DomainContactsResultType extends _DomainContactsResultType {
@@ -318,6 +337,7 @@ interface _DomainCreateResultType extends BaseType {
     ChargedAmount: number;
     Domain: string;
     DomainID: number;
+    FreePositiveSSL: boolean;
     NonRealTimeDomain: boolean;
     OrderID: number;
     Registered: boolean;
@@ -329,19 +349,9 @@ interface DomainCreateResultType extends _DomainCreateResultType {
     constructor: { new(): DomainCreateResultType };
 }
 
-interface _DomainDetails extends BaseType {
-    DomainDetails: DomainDetailsType;
-}
-
-export interface DomainDetails extends _DomainDetails {
-    constructor: { new(): DomainDetails };
-}
-
-export let DomainDetails: { new(): DomainDetails };
-
 interface _DomainDetailsType extends BaseType {
     CreatedDate?: string;
-    ExpiredDate: string;
+    ExpiredDate?: string;
     NumYears?: number;
 }
 
@@ -350,8 +360,7 @@ interface DomainDetailsType extends _DomainDetailsType {
 }
 
 interface _DomainDNSGetEmailForwardingResultType extends BaseType {
-    Domain: string;
-    Forward: ForwardType[];
+    Forward?: ForwardType[];
 }
 
 interface DomainDNSGetEmailForwardingResultType extends _DomainDNSGetEmailForwardingResultType {
@@ -361,7 +370,7 @@ interface DomainDNSGetEmailForwardingResultType extends _DomainDNSGetEmailForwar
 interface _DomainDNSGetHostsResultType extends BaseType {
     Domain: string;
     IsUsingOurDNS: boolean;
-    Host: HostType[];
+    Host?: HostType[];
 }
 
 interface DomainDNSGetHostsResultType extends _DomainDNSGetHostsResultType {
@@ -379,8 +388,6 @@ interface DomainDNSGetListResultType extends _DomainDNSGetListResultType {
 }
 
 interface _DomainDNSSetCustomResultType extends BaseType {
-    Domain: string;
-    Updated: boolean;
 }
 
 interface DomainDNSSetCustomResultType extends _DomainDNSSetCustomResultType {
@@ -399,6 +406,7 @@ interface DomainDNSSetDefaultResultType extends _DomainDNSSetDefaultResultType {
 interface _DomainDNSSetEmailForwardingResultType extends BaseType {
     Domain: string;
     IsSuccess: boolean;
+    Warnings?: WarningsType;
 }
 
 interface DomainDNSSetEmailForwardingResultType extends _DomainDNSSetEmailForwardingResultType {
@@ -408,6 +416,7 @@ interface DomainDNSSetEmailForwardingResultType extends _DomainDNSSetEmailForwar
 interface _DomainDNSSetHostsResultType extends BaseType {
     Domain: string;
     IsSuccess: boolean;
+    Warnings?: WarningsType;
 }
 
 interface DomainDNSSetHostsResultType extends _DomainDNSSetHostsResultType {
@@ -422,7 +431,7 @@ interface DomainemailsType extends _DomainemailsType {
     constructor: { new(): DomainemailsType };
 }
 
-interface _DomainGetInfoResultType extends _DomainDetails {
+interface _DomainGetInfoResultType extends BaseType {
     DomainName: string;
     ID: number;
     IsOwner: boolean;
@@ -430,8 +439,10 @@ interface _DomainGetInfoResultType extends _DomainDetails {
     OwnerName: string;
     Status: string;
     DnsDetails: DnsDetailsType;
+    DomainDetails: DomainDetailsType;
     LockDetails: LockDetailsType;
     Modificationrights: ModificationrightsType;
+    PremiumDnsSubscription?: PremiumDnsSubscriptionType;
     Whoisguard: WhoisguardType;
 }
 
@@ -440,7 +451,7 @@ interface DomainGetInfoResultType extends _DomainGetInfoResultType {
 }
 
 interface _DomainGetListResultType extends BaseType {
-    Domain: DomainType[];
+    Domain?: DomainType[];
 }
 
 interface DomainGetListResultType extends _DomainGetListResultType {
@@ -449,6 +460,9 @@ interface DomainGetListResultType extends _DomainGetListResultType {
 
 interface _DomainGetRegistrarLockResultType extends BaseType {
     Domain: string;
+    IsClientDeleteProhibited: boolean;
+    IsClientHold: boolean;
+    IsClientUpdateProhibited: boolean;
     RegistrarLockStatus: boolean;
 }
 
@@ -457,10 +471,8 @@ interface DomainGetRegistrarLockResultType extends _DomainGetRegistrarLockResult
 }
 
 interface _DomainNSCreateResultType extends BaseType {
-    Domain: string;
     IP: string;
     IsSuccess: boolean;
-    Nameserver: string;
 }
 
 interface DomainNSCreateResultType extends _DomainNSCreateResultType {
@@ -489,9 +501,7 @@ interface DomainNSInfoResultType extends _DomainNSInfoResultType {
 }
 
 interface _DomainNSUpdateResultType extends BaseType {
-    Domain: string;
     IsSuccess: boolean;
-    Nameserver: string;
 }
 
 interface DomainNSUpdateResultType extends _DomainNSUpdateResultType {
@@ -510,13 +520,14 @@ interface DomainReactivateResultType extends _DomainReactivateResultType {
     constructor: { new(): DomainReactivateResultType };
 }
 
-interface _DomainRenewResultType extends _DomainDetails {
+interface _DomainRenewResultType extends BaseType {
     ChargedAmount: number;
     DomainID: number;
     DomainName: string;
     OrderID: number;
     Renew: boolean;
     TransactionID: number;
+    DomainDetails?: DomainDetailsType;
 }
 
 interface DomainRenewResultType extends _DomainRenewResultType {
@@ -534,7 +545,12 @@ interface DomainSetContactResultType extends _DomainSetContactResultType {
 
 interface _DomainSetRegistrarLockResultType extends BaseType {
     Domain: string;
+    IsClientDeleteProhibitedUpdated: boolean;
+    IsClientHoldUpdated: boolean;
+    IsClientUpdateProhibitedUpdated: boolean;
+    IsRegistrarLockStatusUpdated: boolean;
     IsSuccess: boolean;
+    RegistrarLockStatus: boolean;
 }
 
 interface DomainSetRegistrarLockResultType extends _DomainSetRegistrarLockResultType {
@@ -550,7 +566,7 @@ interface DomainsType extends _DomainsType {
 
 interface _DomainTransferCreateResultType extends BaseType {
     ChargedAmount: number;
-    Domainname: string;
+    DomainName: string[];
     OrderID: number;
     StatusCode: number;
     StatusID: number;
@@ -564,8 +580,10 @@ interface DomainTransferCreateResultType extends _DomainTransferCreateResultType
 }
 
 interface _DomainTransferGetStatusResultType extends BaseType {
+    StatusDate: Date;
     StatusID: number;
     TransferID: number;
+    TransferOrderDate: Date;
 }
 
 interface DomainTransferGetStatusResultType extends _DomainTransferGetStatusResultType {
@@ -574,7 +592,7 @@ interface DomainTransferGetStatusResultType extends _DomainTransferGetStatusResu
 
 interface _DomainTransferUpdateStatusResultType extends BaseType {
     Resubmit: boolean;
-    TransferID: number;
+    TransferID: number[];
 }
 
 interface DomainTransferUpdateStatusResultType extends _DomainTransferUpdateStatusResultType {
@@ -706,7 +724,7 @@ interface HttpDCValidationType extends _HttpDCValidationType {
 
 interface _ListType extends BaseType {
     AddressId: number;
-    AddressName: string;
+    IsDefault: boolean;
 }
 
 interface ListType extends _ListType {
@@ -744,6 +762,18 @@ interface _PagingType extends BaseType {
 
 interface PagingType extends _PagingType {
     constructor: { new(): PagingType };
+}
+
+interface _PremiumDnsSubscriptionType extends BaseType {
+    CreatedDate: string;
+    ExpirationDate: Date;
+    IsActive: boolean;
+    SubscriptionId: number;
+    UseAutoRenew: boolean;
+}
+
+interface PremiumDnsSubscriptionType extends _PremiumDnsSubscriptionType {
+    constructor: { new(): PremiumDnsSubscriptionType };
 }
 
 interface _PriceType extends BaseType {
@@ -843,16 +873,6 @@ interface SSLActivateResultType extends _SSLActivateResultType {
     constructor: { new(): SSLActivateResultType };
 }
 
-interface _SSLCertificate extends BaseType {
-    SSLCertificate: SSLCertificateType;
-}
-
-export interface SSLCertificate extends _SSLCertificate {
-    constructor: { new(): SSLCertificate };
-}
-
-export let SSLCertificate: { new(): SSLCertificate };
-
 interface _SSLCertificateType extends BaseType {
     CertificateID: number;
     SANSCount: number;
@@ -864,11 +884,12 @@ interface SSLCertificateType extends _SSLCertificateType {
     constructor: { new(): SSLCertificateType };
 }
 
-interface _SSLCreateResultType extends _SSLCertificate {
+interface _SSLCreateResultType extends BaseType {
     ChargedAmount: number;
     IsSuccess: boolean;
     OrderId: number;
     TransactionId: number;
+    SSLCertificate: SSLCertificateType;
 }
 
 interface SSLCreateResultType extends _SSLCreateResultType {
@@ -878,9 +899,9 @@ interface SSLCreateResultType extends _SSLCreateResultType {
 interface _SSLEditDCVMethodResultType extends BaseType {
     ID: number;
     IsSuccess: boolean;
-    DNSDCValidation: DNSDCValidationType;
+    DNSDCValidation?: DNSDCValidationType;
     Domains: DomainsType;
-    HttpDCValidation: HttpDCValidationType;
+    HttpDCValidation?: HttpDCValidationType;
 }
 
 interface SSLEditDCVMethodResultType extends _SSLEditDCVMethodResultType {
@@ -893,8 +914,9 @@ interface _SSLGetInfoResultType extends BaseType {
     SANSCount: number;
     Status: string;
     Type: string;
-    CertificateDetails: CertificateDetailsType;
-    Provider: ProviderType;
+    Years: number;
+    CertificateDetails?: CertificateDetailsType;
+    Provider?: ProviderType;
 }
 
 interface SSLGetInfoResultType extends _SSLGetInfoResultType {
@@ -918,11 +940,12 @@ interface SSLParseCSRResultType extends _SSLParseCSRResultType {
     constructor: { new(): SSLParseCSRResultType };
 }
 
-interface _SSLPurchaseMoreSANSResultType extends _SSLCertificate {
+interface _SSLPurchaseMoreSANSResultType extends BaseType {
     ChargedAmount: number;
     IsSuccess: boolean;
     OrderId: number;
     TransactionId: number;
+    SSLCertificate?: SSLCertificateType;
 }
 
 interface SSLPurchaseMoreSANSResultType extends _SSLPurchaseMoreSANSResultType {
@@ -971,10 +994,10 @@ interface SSLResendFulfillmentEmailResultType extends _SSLResendFulfillmentEmail
 
 interface _SSLType extends BaseType {
     CertificateID: number;
-    HostName: string;
     IsExpiredYN: boolean;
     SSLType: string;
     Status: string;
+    Years: number;
 }
 
 interface SSLType extends _SSLType {
@@ -1011,6 +1034,15 @@ interface TechType extends _TechType {
     constructor: { new(): TechType };
 }
 
+interface _TldCategoryType extends BaseType {
+    Name: string;
+    SequenceNumber: number;
+}
+
+interface TldCategoryType extends _TldCategoryType {
+    constructor: { new(): TldCategoryType };
+}
+
 interface _TldsType extends BaseType {
     Tld: TldType[];
 }
@@ -1020,6 +1052,7 @@ interface TldsType extends _TldsType {
 }
 
 interface _TldType extends Primitive._string {
+    AddGracePeriodDays: number;
     Category: string;
     IsApiRegisterable: boolean;
     IsApiRenewable: boolean;
@@ -1037,8 +1070,15 @@ interface _TldType extends Primitive._string {
     MinTransferYears: number;
     Name: string;
     NonRealTime: boolean;
+    ProviderApiDelete: boolean;
+    ReactivateMaxDays: number;
+    RenewalMaxDays: number;
+    RenewalMinDays: number;
     SequenceNumber: number;
+    SupportsRegistrarLock: boolean;
     Type: string;
+    WhoisVerification: boolean;
+    Categories?: CategoriesType[];
 }
 
 interface TldType extends _TldType {
@@ -1054,9 +1094,8 @@ interface TransferGetListResultType extends _TransferGetListResultType {
 }
 
 interface _TransferType extends BaseType {
-    Domainname: string;
+    DomainName: string[];
     ID: number;
-    OrderID: number;
     Status: string;
     StatusID: number;
     User: string;
@@ -1106,7 +1145,11 @@ interface UserGetPricingResultType extends _UserGetPricingResultType {
 }
 
 interface _UserLoginResultType extends BaseType {
+    IsInTargetGroup: number;
+    IsPasswordOld: number;
+    IsTwoFaEnabled: number;
     LoginSuccess: boolean;
+    UserID: number;
     UserName: string;
 }
 
@@ -1116,7 +1159,7 @@ interface UserLoginResultType extends _UserLoginResultType {
 
 interface _UserResetPasswordResultType extends BaseType {
     Success: boolean;
-    Email: string;
+    Email?: string;
 }
 
 interface UserResetPasswordResultType extends _UserResetPasswordResultType {
@@ -1198,7 +1241,7 @@ interface WhoisguardEnableResultType extends _WhoisguardEnableResultType {
 }
 
 interface _WhoisguardGetListResultType extends BaseType {
-    Whoisguard: WhoisguardType[];
+    Whoisguard?: WhoisguardType[];
 }
 
 interface WhoisguardGetListResultType extends _WhoisguardGetListResultType {
@@ -1256,6 +1299,7 @@ export interface document extends BaseType {
     ApproverEmail: string;
     AuxBilling: AuxBillingType;
     CaCertificates: CaCertificatesType;
+    Categories: CategoriesType;
     Certificate: CertificateType;
     CertificateDetails: CertificateDetailsType;
     Certificates: CertificatesType;
@@ -1263,7 +1307,7 @@ export interface document extends BaseType {
     CommandResponse: CommandResponseType;
     CommonName: string;
     Country: string;
-    CreateAddFundsRequestResult: CreateAddFundsRequestResultType;
+    CreateAddFundsRequestResult: CreateAddFundsRequestResultType[];
     CreatedDate: string;
     CSR: string;
     CSRDetails: CSRDetailsType;
@@ -1306,6 +1350,7 @@ export interface document extends BaseType {
     Error: ErrorType;
     Errors: ErrorsType;
     ExecutionTime: number;
+    ExpirationDate: Date;
     ExpiredDate: string;
     Fax: number;
     FileContent: string;
@@ -1321,6 +1366,7 @@ export interface document extends BaseType {
     HostName: HostNameType;
     HttpDCValidation: HttpDCValidationType;
     ID: number;
+    IsActive: boolean;
     JobTitle: string;
     LastName: string;
     List: ListType;
@@ -1341,6 +1387,7 @@ export interface document extends BaseType {
     Phone: number;
     PhoneExt: string;
     PostalCode: number;
+    PremiumDnsSubscription: PremiumDnsSubscriptionType;
     Price: PriceType;
     Product: ProductType;
     ProductCategory: ProductCategoryType;
@@ -1370,13 +1417,16 @@ export interface document extends BaseType {
     StateProvince: string;
     StateProvinceChoice: string;
     Status: string;
+    SubscriptionId: number;
     Target: TargetType;
     Tech: TechType;
     Tld: TldType;
+    TldCategory: TldCategoryType;
     Tlds: TldsType;
     TotalItems: number;
     Transfer: TransferType;
     TransferGetListResult: TransferGetListResultType;
+    UseAutoRenew: boolean;
     UserChangePasswordResult: UserChangePasswordResultType;
     UserCreateResult: UserCreateResultType;
     UserGetBalancesResult: UserGetBalancesResultType;
