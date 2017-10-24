@@ -1,6 +1,6 @@
-declare abstract class NcCommand<ResponseType = any> {
+export abstract class NcCommand<ResponseType = any> {
     constructor(public commandName: string,
                 public params: object);
 
-    public toRequestParams(): any;
+    public toRequestParams(): object;
 }

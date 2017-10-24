@@ -1,6 +1,10 @@
 import { DomainCheckResultType, DomainCreateResultType, UserGetPricingResultType } from '../model/namecheap.api';
+import { NcClient } from './NcClient';
+import { NcConfig } from './NcConfig';
 
-interface NcAPI {
+declare interface NcAPI {
+
+    config: NcConfig;
 
     _client: NcClient;
 
