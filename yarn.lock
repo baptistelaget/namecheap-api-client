@@ -2,13 +2,17 @@
 # yarn lockfile v1
 
 
-"@types/bluebird@*", "@types/bluebird@^3.5.10", "@types/bluebird@^3.5.16":
+"@types/bluebird@*", "@types/bluebird@^3.5.16":
   version "3.5.16"
   resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.16.tgz#d65dbbf3bc62a0b3dd145f48dc6511b1ed8cc6bb"
 
 "@types/bluebird@3.0.x":
   version "3.0.37"
   resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.0.37.tgz#2e76b394aa9bea40d04241a31c0887a260283388"
+
+"@types/bluebird@^3.5.10":
+  version "3.5.18"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.18.tgz#6a60435d4663e290f3709898a4f75014f279c4d6"
 
 "@types/chai-as-promised@^7.1.0":
   version "7.1.0"
@@ -43,16 +47,16 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.43.tgz#03c54589c43ad048cbcbfd63999b55d0424eec27"
 
 "@types/node@*", "@types/node@^8.0.28":
-  version "8.0.44"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.44.tgz#5c39800fda4b76dab39a5f28fda676fc500015ac"
+  version "8.0.47"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.47.tgz#968e596f91acd59069054558a00708c445ca30c2"
 
 "@types/node@^6.0.46":
   version "6.0.89"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.89.tgz#154be0e6a823760cd6083aa8c48f952e2e63e0b0"
 
 "@types/node@^7.0.0":
-  version "7.0.44"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.44.tgz#20422b3dada536f35bf318ac3e24b8c48200803d"
+  version "7.0.46"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.46.tgz#c3dedd25558c676b3d6303e51799abb9c3f8f314"
 
 "@types/request-promise@^4.1.38":
   version "4.1.38"
@@ -294,7 +298,18 @@ cwait@^1.1.1:
   dependencies:
     cdata "^0.1.1"
 
-cxml@beaulac/cxml#fixes, cxml@~0.1.0:
+cxml@beaulac/cxml#fixes:
+  version "0.1.1"
+  resolved "https://codeload.github.com/beaulac/cxml/tar.gz/ba0a51f09a681330c42d6a193638fcbf27c7d0b2"
+  dependencies:
+    "@types/bluebird" "3.0.x"
+    "@types/node" "^7.0.0"
+    "@types/sax" "^1.0.0"
+    bluebird "^3.4.7"
+    debug "^3.1.0"
+    sax "~1.2.4"
+
+cxml@~0.1.0:
   version "0.1.1"
   resolved "https://codeload.github.com/beaulac/cxml/tar.gz/d8a9f7ec519d5353a9de2f78d135495a8f349237"
   dependencies:
